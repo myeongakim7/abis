@@ -1,0 +1,518 @@
+<script>
+  $(function(){
+      <?if( !empty($type) && $type == "goods" ):?>
+      $("#goods")[0].click();
+      <?elseif(!empty($type) && $type == "video" ):?>
+      $("#video")[0].click();
+      <?endif;?>
+  });
+</script>
+<div class="pagenater">
+  <a
+    href="/sub.html#anchor1"
+    target="_self"
+    class="pn0"
+    data-menuanchor="anchor1"
+    ><span class="blind">세계관</span></a
+  >
+  <a
+    href="/sub.html#anchor2"
+    target="_self"
+    class="pn1"
+    data-menuanchor="anchor2"
+    ><span class="blind">캐릭터</span></a
+  >
+  <a
+    href="/sub.html#anchor3"
+    target="_self"
+    class="pn2"
+    data-menuanchor="anchor3"
+    ><span class="blind">게임특징</span></a
+  >
+  <a
+    href="/sub.html#anchor4"
+    target="_self"
+    class="pn3"
+    data-menuanchor="anchor4"
+    ><span class="blind">미디어</span></a
+  >
+</div>
+<div id="content" class="fullpage">
+  <div id="stg3" class="section animate">
+    <div class="fade"></div>
+    <div class="reset">
+      <div class="worldView">
+        <div class="crawl">
+          <p class="mb80">"여기는 어비스”</p>
+          <p>어비스는 신들이 너를 봉인하기 위해 만든, 거대한 탑이야.</p>
+          <p>하지만 사신인 내가 특별히 기회를 주지.</p>
+          <p>이 높은 어비스를 탈출해봐.</p>
+          <p>
+            그렇게 하면 네 기억을 돌려주고, 원래 있던 곳에서 부활할 수 있게
+            해줄게.
+          </p>
+
+          <p class="mb120">자, 그럼...</p>
+          <p class="big">어비스에 온 걸, 진심으로 환영한다</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="stg4" class="section animate header_white">
+    <div class="reset_bottom">
+      <div class="characterSlider">
+        <div class="chaSliderWrapper">
+          <div class="chaFile">
+            <div class="pic"></div>
+            <div class="infBox">
+              <p class="inf inf1">
+                <span class="name1">아미</span>
+                <span class="name2">Army</span>
+              </p>
+              <div class="inf inf2">
+                <span class="field fd1"></span>
+                <span class="field fd2"></span>
+                <span class="field fd3"></span>
+                <span class="field fd4"></span>
+                <span class="field fd5"></span>
+                <span class="field fd6"></span>
+              </div>
+              <p class="inf inf3">
+                교육자의 위치는 언제나 어렵지. 제자 앞에서는 늘 완벽해야 하니까.
+              </p>
+              <div class="inf inf4">
+                <button class="btnAudioPlay">목소리 듣기</button>
+                <audio src="" id="vcSource"></audio>
+                <p class="cv"></p>
+                <div class="toggle">
+                  <button class="swch kr">KR</button>
+                  <button class="swch jp">JP</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="thumbList">
+          <button class="chaThumb isActive" data="0">
+            <img src="./images/character/thumb_01.png" alt="" />
+          </button>
+          <button class="chaThumb" data="1">
+            <img src="./images/character/thumb_02.png" alt="" />
+          </button>
+          <button class="chaThumb" data="2">
+            <img src="./images/character/thumb_03.png" alt="" />
+          </button>
+          <button class="chaThumb" data="3">
+            <img src="./images/character/thumb_04.png" alt="" />
+          </button>
+          <button class="chaThumb" data="4">
+            <img src="./images/character/thumb_comming.png" alt="" />
+          </button>
+        </div>
+        <div class="wpCategoryTab">
+          <a href="javascript:void(0);" class="wp1 isActive" data="0">
+            <span class="ic"></span>
+            <span class="t">검</span>
+          </a>
+          <a href="javascript:void(0);" class="wp2" data="4">
+            <span class="ic"></span>
+            <span class="t">총</span>
+          </a>
+          <a href="javascript:void(0);" class="wp3" data="3">
+            <span class="ic"></span>
+            <span class="t">책</span>
+          </a>
+          <a href="javascript:void(0);" class="wp4" data="2">
+            <span class="ic"></span>
+            <span class="t">지팡이</span>
+          </a>
+          <a href="javascript:void(0);" class="wp5" data="1">
+            <span class="ic"></span>
+            <span class="t">둔기</span>
+          </a>
+        </div>
+        <div class="btn_wrap">
+          <button class="btnPrev"></button>
+          <button class="btnNext"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="stg5" class="section animate header_white">
+    <div class="reset">
+      <div class="gallaryWrap">
+        <a href="javascript:imgView();" class="frame" id="gwTarget" data-roll=""
+          ><span class="blind">이미지 크게보기</span></a
+        >
+        <div class="flipster">
+          <ul class="flip-items">
+            <li id="1">
+              <img src="/images/slider/market1.png" width="100%" alt="" />
+            </li>
+            <li id="2">
+              <img src="/images/slider/market2.jpg" width="100%" alt="" />
+            </li>
+            <li id="3">
+              <img src="/images/slider/market3.jpg" width="100%" alt="" />
+            </li>
+            <li id="4">
+              <img src="/images/slider/market4.jpg" width="100%" alt="" />
+            </li>
+            <li id="5">
+              <img src="/images/slider/market5.jpg" width="100%" alt="" />
+            </li>
+            <li id="6">
+              <img src="/images/slider/market6.jpg" width="100%" alt="" />
+            </li>
+            <li id="7">
+              <img src="/images/slider/market7.jpg" width="100%" alt="" />
+            </li>
+            <li id="8">
+              <img src="/images/slider/market8.jpg" width="100%" alt="" />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="stg6" class="section animate">
+    <div class="reset_top">
+      <div class="tab">
+        <a
+          href="javascript:void(0);"
+          class="isActive"
+          id="video"
+          onclick="setGtag('go_to_video')"
+          >영상</a
+        >
+        <a href="javascript:void(0);" onclick="setGtag('go_to_image')"
+          >이미지</a
+        >
+        <a
+          href="javascript:void(0);"
+          id="goods"
+          onclick="setGtag('go_to_goods')"
+          >디지털 굿즈</a
+        >
+      </div>
+      <div class="tabCont isActive">
+        <div class="myVdoWrapper">
+          <div class="t"></div>
+          <div class="l"></div>
+          <div class="r"></div>
+          <div class="b"></div>
+          <div id="myVdoSwiper" style="overflow: hidden">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="video-container">
+                  <div class="yt-player" data-id="5a6RcgAIi8g"></div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="video-container">
+                  <div class="yt-player" data-id="g0IkNT4muXU"></div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="video-container">
+                  <div class="yt-player" data-id="tw3t05DOJKw"></div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="video-container">
+                  <div class="yt-player" data-id="So6PrpvNTME"></div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="video-container">
+                  <div class="yt-player" data-id="7hPHqZVoqUE"></div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="video-container">
+                  <div class="yt-player" data-id="eqcId4zWU5k"></div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="video-container">
+                  <div class="yt-player" data-id="1QKHB534lC4"></div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="video-container">
+                  <div class="yt-player" data-id="gzW1qhRwK3Q"></div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="video-container">
+                  <div class="yt-player" data-id="8AYhBRUR30I"></div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="video-container">
+                  <div class="yt-player" data-id="vfkTjHFWOe0"></div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="video-container">
+                  <div class="yt-player" data-id="G1ycWNnLqxQ"></div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="video-container">
+                  <div class="yt-player" data-id="NQ_t_PmQX10"></div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="video-container">
+                  <div class="yt-player" data-id="dSOvn-NdlIU"></div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="video-container">
+                  <div class="yt-player" data-id="znpyF1HXiuw"></div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="video-container">
+                  <div class="yt-player" data-id="J_0814KIW3E"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-video-prev"></div>
+            <div class="swiper-video-next"></div>
+          </div>
+          <div class="mdBox">
+            <div id="myVdoSwiper2">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="./images/media/thumbnail10.png" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/media/thumbnail11.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/media/thumbnail12.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/media/thumbnail13.png" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/media/thumbnail5.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/media/thumbnail9.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/media/thumbnail6.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/media/thumbnail7.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/media/thumbnail8.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="https://img.youtube.com/vi/vfkTjHFWOe0/mqdefault.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="https://img.youtube.com/vi/G1ycWNnLqxQ/mqdefault.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/media/thumbnail1.png" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/media/thumbnail2.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/media/thumbnail3.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/media/thumbnail4.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tabCont">
+        <div class="mediaWrap">
+          <a
+            href="javascript:imgView2();"
+            class="frame"
+            id="gwTarget2"
+            data-roll=""
+            ><span class="blind">이미지 크게보기</span></a
+          >
+          <div class="l"></div>
+          <div class="r"></div>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./images/slider/slider2_img1.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/slider/slider2_img2.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/slider/slider2_img3.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/slider/slider2_img4.jpg" alt="" />
+            </div>
+          </div>
+          <div class="gallary-pagination"></div>
+          <div class="gallary-prev"></div>
+          <div class="gallary-next"></div>
+        </div>
+        <div class="mdBox">
+          <div class="mediaThumbWrap">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./images/slider/slider2_img1.jpg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/slider/slider2_img2.jpg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/slider/slider2_img3.jpg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/slider/slider2_img4.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tabCont">
+        <div class="digitalDownload">
+          <a
+            href="#"
+            download=""
+            class="frame"
+            id="downloadLink"
+            onclick="setDownGtag(this)"
+          ></a>
+          <div class="l"></div>
+          <div class="r"></div>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide goods">
+              <a href="#test1"
+                ><img
+                  src="./images/slider/slider3_img8.jpg"
+                  alt=""
+                  data-gtag="goods1_down"
+                  data-download="/public/download/bg_pc/pc1.png"
+              /></a>
+            </div>
+            <div class="swiper-slide goods">
+              <a href="#test2"
+                ><img
+                  src="./images/slider/slider3_img7.jpg"
+                  alt=""
+                  data-gtag="goods2_down"
+                  data-download="/public/download/bg_pc/pc2.png"
+              /></a>
+            </div>
+            <div class="swiper-slide goods">
+              <a href="#test3"
+                ><img
+                  src="./images/slider/slider3_img6.jpg"
+                  alt=""
+                  data-gtag="goods3_down"
+                  data-download="/public/download/bg_pc/pc3.png"
+              /></a>
+            </div>
+            <div class="swiper-slide goods">
+              <a href="#test4"
+                ><img
+                  src="./images/slider/slider3_img5.jpg"
+                  alt=""
+                  data-gtag="goods4_down"
+                  data-download="/public/download/bg_mo/MO_bg.zip"
+              /></a>
+            </div>
+            <div class="swiper-slide goods">
+              <a href="#test5"
+                ><img
+                  src="./images/slider/slider3_img4.jpg"
+                  alt=""
+                  data-gtag="goods5_down"
+                  data-download="/public/download/goodnote_sticker/goodnote_sticker.zip"
+              /></a>
+            </div>
+            <div class="swiper-slide goods">
+              <a href="#test6"
+                ><img
+                  src="./images/slider/slider3_img3.jpg"
+                  alt=""
+                  data-gtag="goods6_down"
+                  data-download="/public/download/goodnote_skin/goodnote_skin.zip"
+              /></a>
+            </div>
+            <div class="swiper-slide goods">
+              <a href="#test7"
+                ><img
+                  src="./images/slider/slider3_img2.jpg"
+                  alt=""
+                  data-gtag="goods7_down"
+                  data-download="/public/download/cursor/cursor.zip"
+              /></a>
+            </div>
+            <div class="swiper-slide goods">
+              <a href="#test8"
+                ><img
+                  src="./images/slider/slider3_img1.jpg"
+                  alt=""
+                  data-gtag="goods8_down"
+                  data-download="/public/download/kakao/kakao.zip"
+              /></a>
+            </div>
+          </div>
+          <div class="gallary-pagination"></div>
+          <div class="gallary-prev"></div>
+          <div class="gallary-next"></div>
+        </div>
+        <div class="mdBox">
+          <div class="ddThumbWrap">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./images/slider/slider3_img8.jpg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/slider/slider3_img7.jpg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/slider/slider3_img6.jpg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/slider/slider3_img5.jpg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/slider/slider3_img4.jpg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/slider/slider3_img3.jpg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/slider/slider3_img2.jpg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/slider/slider3_img1.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mskChain"></div>
+    </div>
+  </div>
+  <?$this->load->view("/footer_info");?>
+</div>

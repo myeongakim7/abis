@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <meta property="og:type" content="website">
+    <meta name="robots" content="ALL">
+    <link rel="icon" href=".//images/favicon.png">
+    <title>어비스메이트</title>
+    <meta name="og:type" property="og:type" content="website" />
+    <meta name="og:title" property="og:title" content="[어비스메이트] 정식 OPEN 완료! 지금 바로 탑 위에 운명을 건 소녀들을 만나보세요" />
+    <meta property="og:site_name" content="어비스메이트">
+    <meta name="og:url" property="og:url" content="<?=$this->config->item("base_url")?>" />
+    <meta name="og:image" property="og:image" content="<?=$this->config->item("base_url")?>.//images/share.jpg" />
+    <meta name="google-site-verification" content="BEcgzWRokHrhvoz1GKrMr2q24bLPi7FRfjpBYBPCXDc" />
+    <link rel="preload" href=".//txt/app-ads.txt" as="document">
+    <link rel="stylesheet" type="text/css" href=".//css/icheck.css">
+    <link rel="stylesheet" type="text/css" href=".//css/font.css">
+    <link rel="stylesheet" type="text/css" href=".//css/slick.css">
+    <link rel="stylesheet" type="text/css" href=".//css/fullpage.css">
+    <link rel="stylesheet" type="text/css" href=".//css/main.pc.css">
+
+
+
+    <script type="text/javascript" src=".//js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src=".//js/jquery-migrate-3.1.0.js"></script>
+    <script type="text/javascript" src=".//js/jquery.ba-throttle-debounce.min.js"></script>
+    <script type="text/javascript" src=".//js/icheck.min.js"></script>
+    <script type="text/javascript" src=".//js/slick.js"></script>
+    <script type="text/javascript" src=".//js/fullpage.js"></script>
+    <script type="text/javascript" src=".//js/main.pc.js"></script>
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <script type="text/javascript" src=".//js/process.js"></script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NNQ6RBH9');</script>
+    <!-- End Google Tag Manager -->
+    <script>
+        $(function(){
+            $('.iptPhoneNumber input').on('focus', function() {
+                $(this).data('placeholder', $(this).attr('placeholder'));
+                $(this).attr('placeholder', '');
+            });
+
+            $('.iptPhoneNumber input').on('blur', function() {
+                $(this).attr('placeholder', $(this).data('placeholder'));
+            });
+        })
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L126DW549F"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-L126DW549F');
+    </script>
+    <!-- Meta Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '803197028597051');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=803197028597051&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Meta Pixel Code -->
+</head>
+
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NNQ6RBH9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div id="bodyWrapper" class="">
+    <div class="navContainer">
+        <div class="gnbWrapper">
+            <a href="/#anchor1" class="logo"><span class="blind">어비스메이트 메인 바로가기</span></a>
+            <nav class="navigation" id="navigation">
+                <div class="mainMenu" data="main">
+                    <a href="/#anchor1" class="mn0" data-menuanchor="anchor1">메인</a>
+                    <a href="/#anchor2" class="mn1" data-menuanchor="anchor2"></a>
+                    <a href="/#anchor3" class="mn2" data-menuanchor="anchor3">게임소개</a>
+                    <a href="/#anchor4" class="mn3" data-menuanchor="anchor4">이벤트</a>
+                    <a href="/coupon"   class="mn4">쿠폰 등록</a>
+                </div>
+            </nav>
+            <div class="snsList">
+                <a href="https://cafe.naver.com/abyssmate" target="_blank" class="sns1" onclick="setGtag('outbound_café_link');"><span class="blind">네이버 카페</span></a>
+                <a href="https://www.youtube.com/@df_abyssmate" target="_blank" class="sns2" onclick="setGtag('outbound_youtube');"><span class="blind">유튜브</span></a>
+                <a href="https://x.com/AbyssMate" target="_blank" class="sns3" onclick="setGtag('outbound_twitter')"><span class="blind">X</span></a>
+                <a href="javascript:;" class="sns4"><span class="blind">공유하기</span></a>
+                <ul class="shareList">
+                    <li><a href="javascript:;" class="shareLink"><span class="blind">URL 링크 공유하기</span></a></li>
+                    <li><a href="javascript:copyLink();" class="copyLink" onclick="setGtag('outbound_link')"><span class="blind">URL 복사</span></a></li>
+                    <li><a href="javascript:twitter_share();" class="shareLink" onclick="setGtag('outbound_link_twitter')"><span class="blind">X에 포스트하기</span></a></li>
+                    <li><a href="javascript:shareMessage();" class="shareLink" onclick="setGtag('outbound_link_kakao')"><span class="blind">채널에 포스트하기</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="subMenuWrapper">
+        <div class="subMenu">
+            <a href="/sub.html#anchor1" target="_self" class="smn1">세계관</a>
+            <a href="/sub.html#anchor2" target="_self" class="smn2">캐릭터</a>
+            <a href="/sub.html#anchor3" target="_self" class="smn3">게임특징</a>
+            <a href="/sub.html#anchor4" target="_self" class="smn4">미디어</a>
+        </div>
+    </div>
+    <div class="pagenater">
+        <a href="/#anchor1" class="pn0" data-menuanchor="anchor1"><span class="blind">메인</span></a>
+        <a href="/#anchor2" class="pn1" data-menuanchor="anchor2"><span class="blind">사전예약</span></a>
+        <a href="/#anchor3" class="pn2" data-menuanchor="anchor3"><span class="blind">게임소개</span></a>
+        <a href="/#anchor4" class="pn3" data-menuanchor="anchor4"><span class="blind">이벤트</span></a>
+    </div>
+    <div class="stickyBanner bounce2">
+        <a href="https://cafe.naver.com/abyssmate" class="bnrLink" data-button-name="naver" target="_blank"onclick="setGtag('outbound_café_banner')"><img src=".//images/stickybanner.png" alt=""><span class="blind">공식카페 가입하면 100% 보상 지급!</span></a>
+        <a href="javascript:;" class="closeBanner"><span class="blind">베너 닫기</span></a>
+    </div>
+    <div id="content" class="fullpage">
+        <div id="stg0" class="section animate">
+            <!-- 동영상 BG -->
+            <div class="topVideo">
+                <div class="videoWrap">
+                    <video src=".//video/main_pc.mp4" autoplay="autoplay" loop="loop" muted="muted" playsinline=""
+                           poster=".//images/bg_pg0_0.jpg" id="mainVideoPlayer" class="video on">
+                        <source src=".//video/main_pc.mp4" type="video/mp4" id="mainVideoSource">
+                    </video>
+                </div>
+            </div>
+            <!-- //동영상 BG -->
+            <div class="reset">
+                <div class="obj ci"><span class="blind">어비스메이트</span></div>
+                <div class="obj text1"><span class="blind">차원을 넘는 태그액션 RPG</span></div>
+                <a href="javascript:;" class="obj btnYtVideoPlay" data-roll="LINkrTQSKt8" onclick="setGtag('click_video')"><span class="blind">영상보기</span></a>
+                <div class="obj text2"><span class="blind">탑 위에 운명을 건 소녀들</span></div>
+                <div class="obj objBtn"><a href="#anchor2" class="btnPreBook" onclick="setGtag('click_prereg');"><span class="blind">사전 에약 하기</span></a></div>
+                <a href="#anchor2" class="pageDown"><span class="blind">다음 페이지 보기</span></a>
+            </div>
+            <div class="notice"><span>확률형 아이템 포함</span></div>
+        </div>
+
+
+        <!-- <div id="stg1" class="section animate white">
+            <div class="reset_top">
+                <div class="msk"></div>
+                <div class="chain"></div>
+                <div class="chain2"></div>
+                <div class="bookingBoard_wrap">
+                    <div class="bookingBoard">
+                        <form action="">
+                            <div class="o obj1"><span class="blind">사전예약 이벤트</span></div>
+                            <div class="o obj2"><span class="blind">어서와 대행자!</span></div>
+                            <div class="o obj3"><span class="blind">목표는 탑의 최정상! 부활의 여정까지 함께해줘!</span></div>
+                            <div class="o obj4"><span class="blind"></span></div>
+                            <div class="o obj5"><span class="blind"></span></div>
+                            <div class="o obj7"><span class="blind">STEP 1. 스토어 사전예약</span></div>
+                            <div class="o obj9"><span class="blind">STEP 2. 휴대폰 사전예약</span></div>
+                            <div class="o obj10"><span class="blind">휴대폰 사전예약하면 레버넌트 소환석 열개 지급</span></div>
+                            <div class="o osSelect">
+                                <label for="appstore">
+                                    <input type="radio" value="apple" name="chooseStore" id="appstore" class="ppCheck">
+                                    <span><img src=".//images/img_pg1_07.png" alt=""></span>
+                                </label>
+                                <label for="googleplay">
+                                    <input type="radio" value="google" name="chooseStore" id="googleplay" class="ppCheck">
+                                    <span><img src=".//images/img_pg1_08.png" alt=""></span>
+                                </label>
+                            </div>
+                            <input type="hidden" id="utm_source" value="<?=$utm_source?>" />
+                            <input type="hidden" id="utm_medium" value="<?=$utm_medium?>" />
+                            <input type="hidden" id="utm_campaign" value="<?=$utm_campaign?>" />
+                            <input type="hidden" id="utm_term" value="<?=$utm_term?>" />
+                            <input type="hidden" id="utm_content" value="<?=$utm_content?>" />
+                            <div class="o iptPhoneNumber"><input type="tel" placeholder="휴대폰 번호입력" id="phone" value="" maxlength="8"  autocomplete="off">
+                            </div>
+                            <ul class="o agreement">
+                                <li>
+                                    <input type="checkbox" class="ppCheck" required id="ipt1">
+                                    <label for="ipt1">[필수] 개인정보 수집 이용 및 LMS 수신 동의</label>
+                                    <a href="javascript:void(0)" class="viewAll uiOpenLyr" data-roll="agree2">자세히 보기</a>
+                                </li>
+                                <li>
+                                    <input type="checkbox" class="ppCheck" required id="ipt2">
+                                    <label for="ipt2">[필수] 만 14세 이상입니다.</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" class="ppCheck" id="ipt3">
+                                    <label for="ipt3">[선택] 드래곤플라이 게임 소식 및 광고성 정보 수신 동의</label>
+                                    <a href="javascript:void(0)" class="viewAll uiOpenLyr" data-roll="agree1">자세히 보기</a>
+                                </li>
+                            </ul>
+                            <a href="javascript:preRegister()" class="o btnBook"><span class="blind">사전 예약 하기</span></a>
+                            <div class="o btnWrap">
+                                <a href="https://apps.apple.com/kr/app/%EC%96%B4%EB%B9%84%EC%8A%A4%EB%A9%94%EC%9D%B4%ED%8A%B8/id6502741028" target="_blank" onclick="setGtag('outbound_ios'); fbq('trackCustom', 'outbound_ios')">
+                                    <img src=".//images/btn_appstore.png" alt="">
+                                </a>
+                                <a href="https://play.google.com/store/apps/details?id=com.dragonfly.abyssmate.G" target="_blank" onclick="setGtag('outbound_aos');fbq('trackCustom', 'outbound_aos')">
+                                    <img src=".//images/btn_googleplay.png" alt="">
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+                <!--  사전예약 종료  -->
+        <div id="stg1" class="section animate white">
+            <div class=" reset_top">
+                <div class="msk"></div>
+                <div class="chain"></div>
+                <div class="chain2"></div>
+                <div class="bookingBoard_wrap">
+                    <div class="bookingBoard">
+                        <form action="">
+                            <div class="o obj1"><span class="blind">사전예약 이벤트</span></div>
+                            <div class="o obj2"><span class="blind">어서와 대행자!</span></div>
+                            <div class="o obj3"><span class="blind">목표는 탑의 최정상! 부활의 여정까지 함께해줘!</span></div>
+                            <div class="o obj4"><span class="blind"></span></div>
+                            <div class="o obj5"><span class="blind"></span></div>
+                            <div class="o btnWrap">
+                                <a href="https://apps.apple.com/kr/app/%EC%96%B4%EB%B9%84%EC%8A%A4%EB%A9%94%EC%9D%B4%ED%8A%B8/id6502741028" target="_blank"><img src=".//images/btn_appstore2.png" alt=""></a>
+                                <a href="https://play.google.com/store/apps/details?id=com.dragonfly.abyssmate.G&hl=ko" target="_blank"><img src=".//images/btn_googleplay2.png" alt=""></a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="stg2" class="section animate white">
+            <div class="reset">
+                <div class="obj obj1"><span class="blind">박쥐</span></div>
+                <div class="o obj2"><span class="blind">대행자! 어비스에 대해 알려줄께</span></div>
+                <div class="obj obj3"><span class="blind">박쥐</span></div>
+                <div class="o infoWrapper">
+                    <div class="info mn1">
+                        <a href="/sub.html#anchor1" target="_self">
+                                <span class="mask">
+                                    <img src=".//images/pg2_info1.png" alt="" class="pc">
+                                    <img src=".//images/pg2_info1_mo.png" alt="" class="mo">
+                                </span>
+                            <span class="text">세계관</span>
+                        </a>
+                    </div>
+                    <div class="info mn2">
+                        <a href="/sub.html#anchor2" target="_self">
+                                <span class="mask">
+                                    <img src=".//images/pg2_info2.png" alt="" class="pc">
+                                    <img src=".//images/pg2_info2_mo.png" alt="" class="mo">
+                                </span>
+                            <span class="text">캐릭터</span>
+                        </a>
+                    </div>
+                    <div class="info mn3">
+                        <a href="/sub.html#anchor3" target="_self">
+                                <span class="mask">
+                                    <img src=".//images/pg2_info3.png" alt="" class="pc">
+                                    <img src=".//images/pg2_info3_mo.png" alt="" class="mo">
+                                </span>
+                            <span class="text">게임특징</span>
+                        </a>
+                    </div>
+                    <div class="info mn4">
+                        <a href="/sub.html#anchor4" target="_self">
+                                <span class="mask">
+                                    <img src=".//images/pg2_info4.png" alt="" class="pc">
+                                    <img src=".//images/pg2_info4_mo.png" alt="" class="mo">
+                                </span>
+                            <span class="text">미디어</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="stg7" class="section animate header_white">
+
+            <div class="reset">
+                <div class="obj text1"><span class="blind"></span></div>
+                <div class="obj text2"><span class="blind"></span></div>
+                <div class="obj text3"><span class="blind"></span></div>
+                <a href="https://cafe.naver.com/abyssmate" class="obj btnGoto" target="_blank" onclick="setGtag('outbound_café_button')"><span class="blind">공식 카페 바로가기</span></a>
+                <div class="evtSliderWrap">
+                    <div class="evtSlider">
+
+                        <ul>
+                            <li><div class="w"><a href="https://cafe.naver.com/abyssmate/160" onclick="setGtag('event_video')"><img src=".//images/eventSlide_04.png" alt=""></a></div></li>
+                            <li><div class="w"><a href="https://cafe.naver.com/abyssmate" target="_blank" onclick="setGtag('event_catoon')"><img src=".//images/eventSlide_03.png" alt=""></a></div></li>
+                            <li><div class="w"><a href="/sub.html?type=goods#anchor4" onclick="setGtag('event_goods')"><img src=".//images/eventSlide_01.png" alt=""></a></div></li>
+                            <li><div class="w"><a href="/mbti"><img src=".//images/eventSlide_02.png" alt="" onclick="setGtag('event_mbti')"></a></div></li>
+                            <!-- 액션 아이템 - 파워 인플루언서 -->
+                            <li><div class="w"><a href="/sub.html?type=video#anchor4" onclick="setGtag('event_video')"><img src=".//images/eventSlide_05.png" alt=""></a></div></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <?$this->load->view("/footer_info");?>
+    </div>
+</div>
+
+<!-- 팝업 -->
+<div class="modalDimmed" id="alert1">
+    <div class="layerAlert">
+        <p class="textBox">복사되었습니다. <br>원하는 곳에 붙여넣기 해주세요.</p>
+        <div class="popBtnWrap"><a href="javascript:;" class="btnConfirm uiCloseLyr">확인</a></div>
+    </div>
+</div>
+<div class="modalDimmed" id="alert2">
+    <div class="layerAlert">
+        <p class="textBox">휴대폰 번호를 정확히 입력해주세요.</p>
+        <div class="popBtnWrap"><a href="javascript:;" class="btnConfirm uiCloseLyr">확인</a></div>
+    </div>
+</div>
+<div class="modalDimmed" id="alert3">
+    <div class="layerAlert">
+        <p class="textBox">스마트폰 OS를 선택해 주세요.</p>
+        <div class="popBtnWrap"><a href="javascript:;" class="btnConfirm uiCloseLyr">확인</a></div>
+    </div>
+</div>
+<div class="modalDimmed" id="alert4">
+    <div class="layerAlert">
+        <p class="textBox">약관에 동의해 주세요.</p>
+        <div class="popBtnWrap"><a href="javascript:;" class="btnConfirm uiCloseLyr">확인</a></div>
+    </div>
+</div>
+<div class="modalDimmed" id="alert5">
+    <div class="layerAlert">
+        <p class="textBox">이미 사전예약에 참여하셨습니다.</p>
+        <div class="popBtnWrap"><a href="javascript:;" class="btnConfirm uiCloseLyr">확인</a></div>
+    </div>
+</div>
+<div class="modalDimmed" id="alert6" style="z-index: 99999;">
+    <div class="layerAlert">
+        <p class="textBox">앱스토어 사전예약 추후 오픈 예정</p>
+        <div class="popBtnWrap"><a href="javascript:;" class="btnConfirm uiCloseLyr">확인</a></div>
+    </div>
+</div>
+<div class="modalDimmed" id="done">
+    <div class="layerDone">
+        <p class="t1">감사합니다. <strong>사전예약이 완료</strong>되었습니다.</p>
+        <p class="t2">어비스메이트와 함께하는 환상적인 모험을 기다려주세요! <br>공식커뮤니티에서 다양한 정보를 확인하고 이벤트도 참여해보세요.</p>
+        <div class="links">
+            <a href="https://cafe.naver.com/abyssmate" target="_blank" onclick="setGtag('outbound_café_link');">네이버카페</a>
+            <a href="https://www.youtube.com/@df_abyssmate​" target="_blank" onclick="setGtag('outbound_youtube');">유튜브</a>
+            <a href="https://x.com/AbyssMate" target="_blank" onclick="setGtag('outbound_twitter');">엑스</a>
+            <a href="https://pf.kakao.com/_vxnRxmG" target="_blank" onclick="setGtag('outbound_kakao');">채널</a>
+        </div>
+        <p class="t2" style="margin:0 0 10px;">스토어 사전 예약도 잊지 마세요!</p>
+        <div class="popBtnWrap">
+            <a href="javascript: isActive('alert6')" onclick="setGtag('outbound_ios')">
+                <img src=".//images/btn_appstore.png" alt="App Store에서 다운하기">
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.dragonfly.abyssmate.G" target="_blank" onclick="setGtag('outbound_aos')">
+                <img src=".//images/btn_googleplay.png" alt="Google Play에서 다운하기">
+            </a>
+        </div>
+        <a href="javascript:;" class="btnCloseLayer uiCloseLyr"><span class="blind">창 닫기</span></a>
+    </div>
+</div>
+
+<div class="modalDimmed" id="agree1">
+    <div class="layerAgree">
+        <p class="tit">광고성 정보 수신 동의</p>
+        <dl>
+            <dt>㈜드래곤플라이는 게임 관련 소식 안내를 위해 개인정보를 수집 및 이용합니다.</dt>
+            <dd>- 수집 및 이용 목적 : 게임 소식 및 이벤트 등 광고성 정보 수신</dd>
+            <dd>- 수집 항목 : 휴대폰 번호</dd>
+            <dd>- 보유 및 이용 기간 : 1년 (SMS/LMS 발송 이력은 1년간 보관 후 삭제합니다.)</dd>
+        </dl>
+        <dl>
+            <dt>㈜드래곤플라이는 다음과 같이 개인정보를 위탁하고 있습니다.</dt>
+            <dd>- 위탁 업체 : BUFF</dd>
+            <dd>- 위탁 목적 : 출시 알림</dd>
+        </dl>
+        <dl>
+            <dt>사전 예약 및 이벤트 알람 서비스를 신청하시는 경우 개인 정보 수집 및 이용에 <br>
+                동의를 하신 것으로 처리됩니다. </dt>
+        </dl>
+        <dl>
+            <dt>동의 후 거부를 원하실 경우 운영센터를 통하여 취소 하실 수 있습니다. </dt>
+        </dl>
+        <a href="javascript:void(0);" class="btnCloseLayer uiCloseLyr"><span class="blind">창 닫기</span></a>
+    </div>
+</div>
+
+<div class="modalDimmed" id="agree2">
+    <div class="layerAgree">
+        <p class="tit">개인정보 수집 및 이용 동의 내용 안내</p>
+        <dl>
+            <dt>㈜드래곤플라이는 사전예약 이벤트를 위해 개인정보를 수집 및 이용합니다.</dt>
+            <dd>- 수집 및 이용 목적 : &lt;어비스메이트&gt; 출시 일정 및 이벤트 안내 &amp; 추가 업데이트 소식 알림</dd>
+            <dd>- 수집 항목 : 휴대폰 번호</dd>
+            <dd>- 보유 및 이용 기간 : 이벤트 종료 후 1년 (SMS/LMS 발송 이력은 1년간 보관 후 삭제합니다.)</dd>
+        </dl>
+        <dl>
+            <dt>㈜드래곤플라이는 다음과 같이 개인정보를 위탁하고 있습니다.</dt>
+            <dd>- 위탁 업체 : BUFF</dd>
+            <dd>- 위탁 목적 : 출시 알림</dd>
+        </dl>
+        <dl>
+            <dt>사전 예약 및 이벤트 알람 서비스를 신청하시는 경우 개인 정보 수집 및 이용에 <br>
+                동의를 하신 것으로 처리됩니다.
+            </dt>
+        </dl>
+        <dl>
+            <dt>동의 후 거부를 원하실 경우 운영센터를 통하여 취소 하실 수 있습니다. </dt>
+        </dl>
+        <a href="javascript:void(0);" class="btnCloseLayer uiCloseLyr"><span class="blind">창 닫기</span></a>
+    </div>
+</div>
+
+
+
+<!-- 동영상 레이어 -->
+<div class="modalDimmed mvModal">
+    <div class="lyrMvClip">
+        <div class="vdoWrap">
+            <div id="player"></div>
+        </div>
+        <!-- <a href="javascript:void(0)" class="fullScreen"><span class="blind">전체보기</span></a> -->
+        <a href="javascript:void(0);" class="btnCloseModal"><span class="blind">동영상 닫기</span></a>
+    </div>
+</div>
+
+<!-- 알림 레이어 테스트용 버튼 개발 시 삭제 해주세요 -->
+<div class="forPc"
+     style="padding:20px;border:1px #000 solid;background-color: #fff;right:20px; z-index: 1000;">
+    <a href="javascript:void(0)" class="uiOpenLyr" data-roll="alert1"
+       style="display:block; margin-bottom:10px; padding:5px 10px;color:#fff;background:#0238f9;">링크 복사완료</a>
+    <a href="javascript:void(0)" class="uiOpenLyr" data-roll="alert2"
+       style="display:block; margin-bottom:10px; padding:5px 10px;color:#fff;background:#0238f9;">휴대폰 번호가 정확하지
+        않음</a>
+    <a href="javascript:void(0)" class="uiOpenLyr" data-roll="alert3"
+       style="display:block; margin-bottom:10px; padding:5px 10px;color:#fff;background:#0238f9;">스마트폰 OS 선택</a>
+    <a href="javascript:void(0)" class="uiOpenLyr" data-roll="alert4"
+       style="display:block; margin-bottom:10px; padding:5px 10px;color:#fff;background:#0238f9;">약관 동의</a>
+    <a href="javascript:void(0)" class="uiOpenLyr" data-roll="done"
+       style="display:block; margin-bottom:10px; padding:5px 10px;color:#fff;background:#0238f9;">신청 완료 레이어</a>
+    <a href="javascript:void(0)" class="uiOpenLyr" data-roll="agree1"
+       style="display:block; margin-bottom:10px; padding:5px 10px;color:#fff;background:#0238f9;">광고성 정보 수신 동의</a>
+    <a href="javascript:void(0)" class="uiOpenLyr" data-roll="agree2"
+       style="display:block; margin-bottom:10px; padding:5px 10px;color:#fff;background:#0238f9;">개인정보 수집 및 이용 동의
+        내용 안내</a>
+    <!-- <a href="javascript:void(0)" class="uiOpenLyr" data-roll="media1" style="display:block; margin-bottom:10px; padding:5px 10px;color:#fff;background:#0238f9;">미디어이미지 팝업</a>  -->
+    <a href="javascript:void(0)" class="closeThis">닫기</a>
+</div>
+<script>
+    $(".closeThis").on('click', function(){
+        $(this).parent().hide();
+    });
+</script>
+<!-- 레이어 테스트용 메뉴 닫기 스크립트 끝 -->
+<script>
+    // 메인 동영상 레이어 유튜브 영상 연결
+    var vdoId = $(".btnYtVideoPlay").attr('data-roll');
+    var _element;
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    // 3. This function creates an <iframe> (and YouTube player)
+    //    after the API code downloads.
+
+    function onYouTubeIframeAPIReady() {
+        new YT.Player('player', {
+            height: '550',
+            width: '980',
+            videoId: vdoId,
+            playerVars: {
+                autoplay: false,
+                loop: false,
+                playlist: vdoId,
+                modestbranding: true,
+                rel: 0
+            },
+            events: {
+                onReady: function (event) {
+                    _element = event.target;
+                }
+            }
+        });
+    }
+
+    $(".btnYtVideoPlay").on("click", function () {
+        $(".mvModal").addClass("isActive");
+        _element.playVideo();
+
+    });
+    $(".lyrMvClip .btnCloseModal").on("click", function () {
+        _element.stopVideo();
+
+        $(".modalDimmed").removeClass("isActive");
+    });
+
+
+    $( document ).ready(function() {
+        $('.evtSliderWrap .evtSlider ul').slick({
+            dots: false,
+            infinite: true,
+            //드래그 안되게하는거
+            draggable: false,
+            speed: 300,
+            arrows: true,
+            // arrows: false,
+            dots:true,
+            // dots:false,
+            centerMode: true,
+            variableWidth: true,
+            centerPadding: '20px'
+        });
+    });
+
+</script>
+
+</body>
+
+</html>

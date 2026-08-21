@@ -1,0 +1,496 @@
+</div>
+
+<div class="modalDimmed" id="media1">
+    <div class="lyrMediaSlide">
+        <div class="mediaWrapper" id="imgViewer">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./images/slider/market1.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/slider/market2.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/slider/market3.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/slider/market4.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/slider/market5.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/slider/market6.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/slider/market7.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/slider/market8.jpg" alt="">
+                </div>
+            </div>
+            <div class="gallary-prev"></div>
+            <div class="gallary-next"></div>
+            <a href="javascript:closeImgView();" class="btnCloseLayer"><span class="blind">창 닫기</span></a>
+        </div>
+    </div>
+</div>
+
+
+<div class="modalDimmed" id="media2">
+    <div class="lyrMediaSlide">
+        <div class="mediaWrapper" id="imgViewer2">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./images/slider/slider2_img1_re.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/slider/slider2_img2_re.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/slider/slider2_img3_re.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/slider/slider2_img4_re.jpg" alt="">
+                </div>
+            </div>
+            <div class="gallary-prev"></div>
+            <div class="gallary-next"></div>
+            <a href="javascript:closeImgView2();" class="btnCloseLayer"><span class="blind">창 닫기</span></a>
+        </div>
+    </div>
+</div>
+
+<div class="modalDimmed" id="alert1" style="z-index: 99999;">
+    <div class="layerAlert">
+        <p class="textBox">복사되었습니다. <br>원하는 곳에 붙여넣기 해주세요.</p>
+        <div class="popBtnWrap"><a href="javascript:;" class="btnConfirm uiCloseLyr">확인</a></div>
+    </div>
+</div>
+
+<div class="pop pop_test hide">
+    <div class="pop_inner">
+        <div class="pop_bg"><img src="./images/mbti/pop_test_bg.png" alt=""></div>
+        <div class="pop_cont_wrap">
+            <div class="pop_cont">
+                <div class="share_box">
+                    <a href="javascript: mbtiRegister();" onclick="setGtag('mbti_result')"><img src="./images/mbti/pop_test_btn.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 팝업 - 공유하기   -->
+<div class="pop pop_share hide">
+    <div class="pop_inner">
+        <a href="javascript:;" class="btn_close b-close"><img src="./images/mbti/pop_close.png" alt=""></a>
+        <div class="pop_bg"><img src="./images/mbti/pop_share_bg.png" alt=""></div>
+        <div class="pop_cont_wrap">
+            <div class="pop_cont">
+                <div class="share_box">
+                    <a href="javascript:shareMessage();" onclick="setGtag('mbti_comp_kakako')"><img src="./images/mbti/pop_icon_katalk.png" alt=""></a>
+                    <a href="javascript:twitter_share();" onclick="setGtag('mbti_comp_twitter')"><img src="./images/mbti/pop_icon_x.png" alt=""></a>
+                    <a href="javascript:copyLink();" onclick="setGtag('mbti_comp_link')"><img src="./images/mbti/pop_icon_url.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 팝업 - 테스트 끝내기 -->
+<div class="pop pop_complete hide">
+    <div class="pop_inner">
+        <a href="javascript:;" class="btn_close b-close"><img src="./images/mbti/pop_close.png" alt=""></a>
+        <div class="pop_bg"><img src="./images/mbti/pop_bg.png" alt=""></div>
+        <div class="pop_cont_wrap">
+            <div class="pop_cont pop_cont1">
+                <div class="pop_cont_img"><img src="./images/mbti/pop_complete_cha1.png" alt=""></div>
+                <a href="/#anchor2" onclick="setGtag('mbti_comp_reg')"><img src="./images/mbti/pop_complete_btn1.png" alt=""></a>
+            </div>
+            <div class="pop_cont pop_cont2">
+                <div class="pop_cont_img"><img src="./images/mbti/pop_complete_cha2.png" alt=""></div>
+                <a href="https://cafe.naver.com/abyssmate" target="_blank" onclick="setGtag('mbti_comp_café')"><img src="./images/mbti/pop_complete_btn2.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+
+    var flipContainer = $('.flipster'),
+        flipItemContainer = flipContainer.find('.flip-items'),
+        flipItem = flipContainer.find('li');
+
+    flipContainer.flipster({
+        itemContainer: flipItemContainer,
+        itemSelector: flipItem,
+        loop: 2,
+        start: 0,
+        style: 'infinite-carousel',
+        spacing: 0,
+        scrollwheel: false,
+        nav: 'after',
+        buttons: true
+    });
+
+    var imgSwiper2;
+    imgSwiper2 = new Swiper('#imgViewer', {
+        loop: false,
+        speed: 500,
+        spaceBetween: 1000,
+        observer: true,
+        autoHeight: true,
+        navigation: {
+            nextEl: '#imgViewer .gallary-next',
+            prevEl: '#imgViewer .gallary-prev',
+        },
+    });
+    function imgView() {
+        var last = $(".flipster__container").find(".flipster__item").length;
+        var slide = $(".flipster__container").find(".flipster__item");
+        slide.each(function (i) {
+            if ($(this).css("zIndex") == 20) {
+                imgSwiper2.update();
+                imgSwiper2.slideTo(i);
+            }
+        });
+        $("#media1").addClass('isActive');
+        setTimeout(function () {
+            $(".lyrMediaSlide").delay(300).css("opacity", 1);
+        }, 300);
+    }
+
+    function closeImgView() {
+        $("#media1").removeClass("isActive");
+    }
+    // 이미지겔러리
+    var swiper1;
+    var swiper1Thumb;
+    var swiper2;
+    var swiper3;
+    var swiper3Thumb;
+    swiper1Thumb = new Swiper(".mediaThumbWrap", {
+        loop: false,
+        observer: true,
+        spaceBetween: 10,
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        watchSlidesProgress: true,
+    });
+    swiper1 = new Swiper('.mediaWrap', {
+        loop: false,
+        speed: 500,
+        observer: true,
+        spaceBetween: 540,
+        effect: 'coverflow',
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        thumbs: {
+            swiper: swiper1Thumb,
+        },
+        coverflowEffect: {
+            rotate: 0,
+            stretch: 80,
+            depth: 400,
+            modifier: 1,
+            slideShadows: false,
+        },
+        navigation: {
+            nextEl: '.mediaWrap .gallary-next',
+            prevEl: '.mediaWrap .gallary-prev',
+        },
+        on: {
+            init: function () {
+                document.getElementById("gwTarget2").setAttribute("data-roll", this.realIndex);
+            },
+            slideChange: function () {
+                document.getElementById("gwTarget2").setAttribute("data-roll", this.realIndex);
+            }
+        },
+
+    });
+
+    //  디지털 다운로드
+
+    var cont = document.getElementsByClassName('digitalDownload')[0];
+    var wrapper;
+    if( cont !== undefined ){
+        wrapper = cont.getElementsByClassName('swiper-wrapper')[0];
+    }
+    swiper2 = new Swiper('#imgViewer2', {
+        loop: false,
+        speed: 500,
+        spaceBetween: 1000,
+        observer: true,
+        navigation: {
+            nextEl: '#imgViewer2 .gallary-next',
+            prevEl: '#imgViewer2 .gallary-prev',
+        },
+    });
+    function imgView2() {
+        var a = $("#gwTarget2").attr("data-roll");
+        // console.log(a);
+        $("#media2").addClass('isActive');
+
+        swiper2.update();
+        swiper2.slideTo(a);
+        setTimeout(function () {
+            $(".lyrMediaSlide").delay(300).css("opacity", 1);
+        }, 300);
+    }
+
+    function closeImgView2() {
+        $("#media2").removeClass("isActive");
+    }
+
+    //   비디오겔러리
+    var myVideo1;
+    var myVideo2;
+    var tag = document.createElement('script');
+
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    var players = [];
+    var activeVdo = 0;
+
+    function onYouTubeIframeAPIReady() {
+        var swiper = document.getElementById('myVdoSwiper');
+        var slides;
+        if (swiper !== null) {
+            slides = swiper.getElementsByClassName('swiper-slide');
+        }
+
+        if (slides !== undefined) {
+            for (var i = 0; i < slides.length; i++) {
+                var element = slides[i].getElementsByClassName('yt-player')[0];
+                var id = element.getAttribute('data-id');
+
+                var player = new YT.Player(element, {
+                    height: '550',
+                    width: '977',
+                    videoId: id,
+                    playerVars: {
+                        autoplay: i === 0 ? 1 : 0,  // 첫번째 영상만 autoplay
+                        // mute: 1,  // 음소거 설정
+                        color: '#7fbc03',
+                        modestbranding: true,
+                        rel: 0
+                    },
+                    // events: {
+                    //     'onReady': onPlayerReady
+                    // }
+                });
+                players.push(player);
+            }
+
+            myVideo2 = new Swiper("#myVdoSwiper2", {
+                loop: false,
+                observer: true,
+                spaceBetween: 10,
+                slidesPerView: 'auto',
+                centeredSlides: true,
+                watchSlidesProgress: true,
+            });
+            myVideo1 = new Swiper("#myVdoSwiper", { 
+                loop: false,
+                observer: true,
+                navigation: {
+                    nextEl: ".swiper-video-next",
+                    prevEl: ".swiper-video-prev",
+                },
+                effect: 'slide',
+                centeredSlides: true,
+                slidesPerView: 'auto',
+                thumbs: {
+                    swiper: myVideo2,
+                },
+                coverflowEffect: {
+                    rotate: 0,
+                    stretch: 80,
+                    depth: 400,
+                    modifier: 1,
+                    slideShadows: false,
+                },
+                on: {
+                    init: function () {
+                        activeVdo = this.realIndex;
+                    },
+                    slideChange: function () {
+                        activeVdo = this.realIndex;
+                        players[myVideo1.previousIndex].pauseVideo();
+                        players[myVideo1.activeIndex].playVideo();
+                    }
+                },
+            });
+        }
+    }
+
+    function handleSlideChange(activeIndex) {
+        players.forEach((player, index) => {
+            if (player) {
+                if (index === activeIndex) {
+                    player.playVideo();
+                } else {
+                    player.pauseVideo();
+                }
+            }
+        });
+    }
+
+    function handleIntersection(entries) {
+        let stg6Visible = false;
+
+        entries.forEach(entry => {
+            if (entry.isIntersecting && entry.target.id === 'stg6') {
+                stg6Visible = true;
+            }
+        });
+
+        if (stg6Visible) {
+            if (!myVideo1) {
+                onYouTubeIframeAPIReady();
+            }
+            handleSlideChange(myVideo1.activeIndex);
+        } else {
+            players.forEach(player => {
+                if (player && typeof player.pauseVideo === 'function') {
+                    player.pauseVideo();
+                }
+            });
+        }
+    }
+
+    function setupIntersectionObserver() {
+        var observer = new IntersectionObserver(handleIntersection, {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        });
+
+        var targetSections = document.querySelectorAll('[id="stg6"]');
+        targetSections.forEach(section => {
+            observer.observe(section);
+        });
+    }
+
+    window.addEventListener('load', () => {
+        setupIntersectionObserver();
+        onYouTubeIframeAPIReady();
+    });
+    window.addEventListener('scroll', setupIntersectionObserver);
+    window.addEventListener('resize', setupIntersectionObserver);
+    
+    
+
+    $(".tab > a").each(function (i) {
+        $(this).on("click", function () {
+            $(".tab > a").removeClass("isActive");
+            $(".tabCont").removeClass("isActive");
+            $(".tab > a").eq(i).addClass("isActive");
+            $(".tabCont").eq(i).addClass("isActive");
+            // if( i == 1){
+            // }
+            switch (i) {
+                case 0:
+                    myVideo1.update();
+                    myVideo2.update();
+                    players[activeVdo].playVideo();
+                    break;
+                case 1:
+                    players[activeVdo].pauseVideo();
+                    swiper1.update();
+                    swiper1Thumb.update();
+                    break;
+                case 2:
+                    swiper3Thumb = new Swiper(".ddThumbWrap", {
+                        loop: false,
+                        observer: true,
+                        spaceBetween: 10,
+                        slidesPerView: 'auto',
+                        centeredSlides: true,
+                        watchSlidesProgress: true,
+                    });
+                    swiper3 = new Swiper('.digitalDownload', {
+                        loop: false,
+                        speed: 500,
+                        observer: true,
+                        spaceBetween: 540,
+                        effect: 'coverflow',
+                        centeredSlides: true,
+                        slidesPerView: 'auto',
+                        thumbs: {
+                            swiper: swiper3Thumb,
+                        },
+                        coverflowEffect: {
+                            rotate: 0,
+                            stretch: 80,
+                            depth: 400,
+                            modifier: 1,
+                            slideShadows: false,
+                        },
+                        navigation: {
+                            nextEl: '.digitalDownload .gallary-next',
+                            prevEl: '.digitalDownload .gallary-prev',
+                        },
+                        on: {
+                            init: function () {
+                                var index   = this.realIndex;
+                                var target  = wrapper.getElementsByTagName('a')[index].childNodes[0].getAttribute("data-download");
+                                var gtag    = wrapper.getElementsByTagName('a')[index].childNodes[0].getAttribute("data-gtag");
+                                var file_ext = target.slice(target.indexOf(".") + 1).toLowerCase();
+                                // console.log(target);
+                                document.getElementById("downloadLink").setAttribute("download", "goods_"+(index + 1)+".jpg");
+                                document.getElementById("downloadLink").setAttribute("href", target);
+                                document.getElementById("downloadLink").setAttribute("data-gtag", gtag);
+                            },
+                            slideChange: function () {
+                                var index   = this.realIndex;
+                                var target  = wrapper.getElementsByTagName('a')[index].childNodes[0].getAttribute("data-download");
+                                var gtag    = wrapper.getElementsByTagName('a')[index].childNodes[0].getAttribute("data-gtag");
+                                var file_ext = target.slice(target.indexOf(".") + 1).toLowerCase();
+                                document.getElementById("downloadLink").setAttribute("download", "goods_"+(index + 1)+"."+file_ext);
+                                document.getElementById("downloadLink").setAttribute("href", target);
+                                document.getElementById("downloadLink").setAttribute("data-gtag", gtag);
+                                // console.log(target)
+
+ 
+
+
+                            }
+                        },
+
+                    });
+                    if( players.length > 0 ){
+                        players[activeVdo].pauseVideo();
+                    }
+                    break;
+
+                default:
+                    break;
+            }
+
+        });
+    });
+
+    $(".mainMenu a").each(function () {
+        $(this).on("click", function () {
+            players[activeVdo].pauseVideo();
+        })
+    });
+    // $(window).scroll($.debounce(200, function (e) {
+    //     if (!$("#bodyWrapper").hasClass("sub4")) {
+    //         players[activeVdo].pauseVideo();
+    //     }
+    //     else {
+    //         //  myVideo1.update();
+    //         //   myVideo2.update();
+    //         //  players[activeVdo].playVideo();
+    //
+    //     }
+    // }));
+</script>
+</body>
+
+</html>

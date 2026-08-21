@@ -1,0 +1,193 @@
+<div id="content">
+    <div class="sub_top">
+        <div class="sub_top_inner">
+            <div class="sub_top_logo"><img src="./images/coupon/sub_top_logo.png" alt=""></div>
+        </div>
+    </div>
+    <div class="coupon">
+        <div class="coupon_inner">
+            <div class="register_wrap">
+                <div class="c_logo">ABYSSMATE</div>
+                <div class="c_head">쿠폰 등록</div>
+
+                <form action="">
+                    <div class="input_wrap">
+                        <div class="method">CID 확인 방법</div>
+                        <div class="input_box">
+                            <label for="cid"></label>
+                            <input type="hidden" id="type" value="<?=$type?>">
+                            <input type="text" id="cid" placeholder="CID를 입력해주세요." value="<?=$cid?>">
+                        </div>
+                        <div class="input_box">
+                            <label for="coupon"></label>
+                            <input type="text" id="coupon" placeholder="쿠폰 번호를 입력해주세요.">
+                        </div>
+                    </div>
+                    <button type="button" class="btn_reward" onclick="couponRegist()">보상 받기</button>
+                </form>
+                <div class="caution">
+                    <div class="tit">주의사항</div>
+                    <ul class="caution_ul">
+                        <li>쿠폰 등록은 계정 당 1회만 가능합니다.</li>
+                        <li>한번 등록한 쿠폰은 다시 등록할 수 없습니다. CID와 쿠폰 번호를 정확하게 입력해주세요.</li>
+                        <li>아이템은 게임 내 우편으로 발송됩니다.</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="confirm_wrap">
+                <div class="confirm_head">CID 확인 방법</div>
+                <ul class="step_ul">
+                    <li>
+                        <div class="step_num">STEP.01</div>
+                        <div class="step_txt">메인 화면에서 프로필 아이콘을 터치하세요!</div>
+                        <div class="step_img"><img src="./images/coupon/step1.png" alt=""></div>
+                    </li>
+                    <li>
+                        <div class="step_num">STEP.02</div>
+                        <div class="step_txt">서비스 탭에서 CID를 확인하세요!</div>
+                        <div class="step_img"><img src="./images/coupon/step2.png" alt=""></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(function(){
+
+            $('.coupon .method').click(function(){
+                $('html, body').animate({
+                    scrollTop: $('.confirm_wrap').offset().top
+                },500)
+            })
+
+            $('.coupon .input_box input').on('focus', function() {
+                $(this).data('placeholder', $(this).attr('placeholder'));
+                $(this).attr('placeholder', '');
+            });
+
+            $('.coupon .input_box input').on('blur', function() {
+                $(this).attr('placeholder', $(this).data('placeholder'));
+            });
+        })
+    </script>
+    <?$this->load->view("footer_info")?>
+
+
+</div>
+
+<!-- 팝업 -->
+<div class="modalDimmed" id="pop_coupon1">
+    <div class="layerAlert layerAlert2">
+        <p class="textBox">우편에서 상품을 수령하세요.</p>
+        <div class="popBtnWrap"><a href="javascript:;" class="btnConfirm uiCloseLyr">확인</a></div>
+    </div>
+</div>
+
+<div class="modalDimmed" id="pop_coupon2">
+    <div class="layerAlert layerAlert2">
+        <p class="textBox">CID를 입력해주세요.</p>
+        <div class="popBtnWrap"><a href="javascript:;" class="btnConfirm uiCloseLyr">확인</a></div>
+    </div>
+</div>
+<div class="modalDimmed" id="pop_coupon3">
+    <div class="layerAlert layerAlert2">
+        <p class="textBox">쿠폰 번호를 입력해주세요.</p>
+        <div class="popBtnWrap"><a href="javascript:;" class="btnConfirm uiCloseLyr">확인</a></div>
+    </div>
+</div>
+<div class="modalDimmed" id="pop_coupon4">
+    <div class="layerAlert layerAlert2">
+        <p class="textBox">잘못된 CID입니다.​<br>CID를 확인해주세요.</p>
+        <div class="popBtnWrap"><a href="javascript:;" class="btnConfirm uiCloseLyr">확인</a></div>
+    </div>
+</div>
+<div class="modalDimmed" id="pop_coupon5">
+    <div class="layerAlert layerAlert2">
+        <p class="textBox">잘못된 쿠폰이거나 <br>유효기간이 지난 쿠폰입니다.</p>
+        <div class="popBtnWrap"><a href="javascript:;" class="btnConfirm uiCloseLyr">확인</a></div>
+    </div>
+</div>
+<div class="modalDimmed" id="pop_coupon6">
+    <div class="layerAlert layerAlert2">
+        <p class="textBox">이미 사용한 쿠폰입니다.</p>
+        <div class="popBtnWrap"><a href="javascript:;" class="btnConfirm uiCloseLyr">확인</a></div>
+    </div>
+</div>
+<div class="modalDimmed" id="pop_coupon7">
+    <div class="layerAlert layerAlert2">
+        <p class="textBox">유효 기간이 만료된 쿠폰입니다.</p>
+        <div class="popBtnWrap"><a href="javascript:;" class="btnConfirm uiCloseLyr">확인</a></div>
+    </div>
+</div>
+<div class="modalDimmed" id="pop_coupon8">
+    <div class="layerAlert layerAlert2">
+        <p class="textBox">오류가 발생하였습니다.​<br>잠시 후 다시 시도해주세요. </p>
+        <div class="popBtnWrap"><a href="javascript:;" class="btnConfirm uiCloseLyr">확인</a></div>
+    </div>
+</div>
+
+<script>
+    function couponRegist() {
+        var cid         = $("#cid").val();
+        var coupon      = $("#coupon").val();
+        var type        = $("#type").val();
+        if(cid == ''){
+            isActive('pop_coupon2');
+            $("#cid").focus();
+            return;
+        }
+        if(coupon == ''){
+            isActive('pop_coupon3');
+            $("#coupon").focus();
+            return;
+        }
+        var param       = {};
+        param.cid       = cid;
+        param.coupon    = coupon;
+        param.type      = type;
+        $.ajax({
+            url         : "/Coupon/testRegistProcess",
+            type        : "POST",
+            dataType    : "JSON",
+            data        : param,
+            success     : function(data){
+                console.log(data);
+                if(data.status == '1'){
+                    isActive('pop_coupon1');
+                    // location.reload();
+                }else if(data.status == '-100'){
+                    switch (data.errorcode) {
+                        case    'cid_empty':
+                            isActive('pop_coupon2');
+                            break;
+                        case    'coupon_empty':
+                            isActive('pop_coupon3');
+                            break;
+                        case    400:
+                            isActive('pop_coupon4');
+                            break;
+                        case    401:
+                            isActive('pop_coupon5');
+                            break;
+                        case    404:
+                            isActive('pop_coupon6');
+                            break;
+                        case    405:
+                            isActive('pop_coupon6');
+                            break;
+                        default:
+                            isActive('pop_coupon8');
+                    }
+                }else{
+                    isActive('pop_coupon8');
+                }
+            }
+        });
+    }
+</script>
+</body>
+
+</html>

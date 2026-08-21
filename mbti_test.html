@@ -1,0 +1,409 @@
+<div id="content">
+  <div id="mbti_test" class="section animate">
+    <div class="reset">
+      <div class="mbti_cont">
+        <div class="mbti_question_box">
+          <div class="mbti_logo">
+            <img src="./images/mbti/logo2.png" alt="" />
+          </div>
+          <div class="title_wrap">
+            <div class="title_img">
+              <img src="./images/mbti/mbti_title2.png" alt="" />
+            </div>
+          </div>
+          <script>
+            $(document).ready(function () {
+              var total_len = $(".qa_ul > li").length;
+              var question = 1;
+              $('input[type="radio"]').change(function () {
+                question++;
+                var rate = ((question - 1) / (total_len - 1)) * 100;
+                if (question > total_len) {
+                  $(".pop_test").bPopup({
+                    modalClose: false,
+                  });
+                  $('input[type="radio"]').prop("disabled", true);
+                } else {
+                  $(".progress_num .q_no").text(question);
+                  $(".qa_ul >li").removeClass("on");
+                  $(".qa_ul .qa" + question).addClass("on");
+                  $(".progress").css("width", rate + "%");
+                  $(".icon_cat").css("left", rate + "%");
+                }
+              });
+            });
+          </script>
+
+          <form action="">
+            <div class="progress_box">
+              <div class="progress_bg">
+                <div class="progress" style="width: 0"></div>
+                <div class="icon_cat" style="left: 0"></div>
+              </div>
+              <div class="progress_num"><span class="q_no">1</span>/12</div>
+            </div>
+
+            <ul class="qa_ul">
+              <li class="qa1 on">
+                <div class="q_num">Q.01</div>
+                <div class="q_head">
+                  어비스에 합류하게 된 당신, 처음 보는 레버넌트에게
+                </div>
+                <div class="answer_wrap">
+                  <div class="answer_box">
+                    <label for="ans1_1"
+                      >같이 탑을 오를래? 먼저 말을 건다
+                      <input
+                        type="radio"
+                        id="ans1_1"
+                        name="answer1"
+                        value="e"
+                      />
+                    </label>
+                  </div>
+                  <div class="answer_box">
+                    <label for="ans1_2"
+                      >레버넌트들이 다가오길 기다린다
+                      <input
+                        type="radio"
+                        id="ans1_2"
+                        name="answer1"
+                        value="i"
+                      />
+                    </label>
+                  </div>
+                </div>
+              </li>
+              <li class="qa2">
+                <div class="q_num">Q.02</div>
+                <div class="q_head">
+                  어비스에 소환된 당신이 제일 먼저 든 생각은?
+                </div>
+                <div class="answer_wrap">
+                  <div class="answer_box">
+                    <label for="ans2_1"
+                      >낯선 곳에 소환됐군, 여기는 탑인가?
+                      <input
+                        type="radio"
+                        id="ans2_1"
+                        name="answer2"
+                        value="s"
+                      />
+                    </label>
+                  </div>
+                  <div class="answer_box">
+                    <label for="ans2_2"
+                      >처음 보는 곳인데... 어떻게 나가지?
+                      <input
+                        type="radio"
+                        id="ans2_2"
+                        name="answer2"
+                        value="n"
+                      />
+                    </label>
+                  </div>
+                </div>
+              </li>
+              <li class="qa3">
+                <div class="q_num">Q.03</div>
+                <div class="q_head">탑을 오르다 도전에 실패했다. 당신은</div>
+                <div class="answer_wrap">
+                  <div class="answer_box">
+                    <label for="ans3_1"
+                      >다음번엔 성공할 수 있도록 전략을 짠다
+                      <input
+                        type="radio"
+                        id="ans3_1"
+                        name="answer3"
+                        value="t"
+                      />
+                    </label>
+                  </div>
+                  <div class="answer_box">
+                    <label for="ans3_2"
+                      >레버넌트들을 다독이며 격려한다
+                      <input
+                        type="radio"
+                        id="ans3_2"
+                        name="answer3"
+                        value="f"
+                      />
+                    </label>
+                  </div>
+                </div>
+              </li>
+              <li class="qa4">
+                <div class="q_num">Q.04</div>
+                <div class="q_head">새로운 레버넌트들과 만나기 직전 나는</div>
+                <div class="answer_wrap">
+                  <div class="answer_box">
+                    <label for="ans4_1"
+                      >어떤 레버넌트들을 만날지 들뜬다
+                      <input
+                        type="radio"
+                        id="ans4_1"
+                        name="answer4"
+                        value="p"
+                      />
+                    </label>
+                  </div>
+                  <div class="answer_box">
+                    <label for="ans4_2"
+                      >어떤 말을 먼저 건넬지 미리 계획한다
+                      <input
+                        type="radio"
+                        id="ans4_2"
+                        name="answer4"
+                        value="j"
+                      />
+                    </label>
+                  </div>
+                </div>
+              </li>
+              <li class="qa5">
+                <div class="q_num">Q.05</div>
+                <div class="q_head">
+                  탑을 오르다 모처럼의 휴식이 찾아온 당신
+                </div>
+                <div class="answer_wrap">
+                  <div class="answer_box">
+                    <label for="ans5_1"
+                      >레버넌트들과 그동안 못한 대화를 해볼까?
+                      <input
+                        type="radio"
+                        id="ans5_1"
+                        name="answer5"
+                        value="e"
+                      />
+                    </label>
+                  </div>
+                  <div class="answer_box">
+                    <label for="ans5_2"
+                      >가만히 누워서 쉬어야겠다
+                      <input
+                        type="radio"
+                        id="ans5_2"
+                        name="answer5"
+                        value="i"
+                      />
+                    </label>
+                  </div>
+                </div>
+              </li>
+              <li class="qa6">
+                <div class="q_num">Q.06</div>
+                <div class="q_head">탑 위를 올려다보니 어떤 빛이 보인다</div>
+                <div class="answer_wrap">
+                  <div class="answer_box">
+                    <label for="ans6_1"
+                      >저 곳이 우리가 올라야 할 곳이군
+                      <input
+                        type="radio"
+                        id="ans6_1"
+                        name="answer6"
+                        value="s"
+                      />
+                    </label>
+                  </div>
+                  <div class="answer_box">
+                    <label for="ans6_2"
+                      >저 빛에 닿으면 내가 부활할 수 있나봐!
+                      <input
+                        type="radio"
+                        id="ans6_2"
+                        name="answer6"
+                        value="n"
+                      />
+                    </label>
+                  </div>
+                </div>
+              </li>
+              <li class="qa7">
+                <div class="q_num">Q.07</div>
+                <div class="q_head">힘들다며 포기하고 싶다는 레버넌트에게</div>
+                <div class="answer_wrap">
+                  <div class="answer_box">
+                    <label for="ans7_1"
+                      >부활이라는 목표를 다시 상기시킨다
+                      <input
+                        type="radio"
+                        id="ans7_1"
+                        name="answer7"
+                        value="t"
+                      />
+                    </label>
+                  </div>
+                  <div class="answer_box">
+                    <label for="ans7_2"
+                      >어떤 점이 힘들었는지 대화를 시도한다
+                      <input
+                        type="radio"
+                        id="ans7_2"
+                        name="answer7"
+                        value="f"
+                      />
+                    </label>
+                  </div>
+                </div>
+              </li>
+              <li class="qa8">
+                <div class="q_num">Q.08</div>
+                <div class="q_head">본격적으로 탑을 오르기 전 나는</div>
+                <div class="answer_wrap">
+                  <div class="answer_box">
+                    <label for="ans8_1"
+                      >느낌이 오면 한 번에 몰아서 오르기로 한다
+                      <input
+                        type="radio"
+                        id="ans8_1"
+                        name="answer8"
+                        value="p"
+                      />
+                    </label>
+                  </div>
+                  <div class="answer_box">
+                    <label for="ans8_2"
+                      >매일 꾸준히 일정하게 탑을 오르기로 한다
+                      <input
+                        type="radio"
+                        id="ans8_2"
+                        name="answer8"
+                        value="j"
+                      />
+                    </label>
+                  </div>
+                </div>
+              </li>
+              <li class="qa9">
+                <div class="q_num">Q.09</div>
+                <div class="q_head">당신은 처음 보는 레버넌트와의 만남이</div>
+                <div class="answer_wrap">
+                  <div class="answer_box">
+                    <label for="ans9_1"
+                      >두근거릴 만큼 기대된다
+                      <input
+                        type="radio"
+                        id="ans9_1"
+                        name="answer9"
+                        value="e"
+                      />
+                    </label>
+                  </div>
+                  <div class="answer_box">
+                    <label for="ans9_2"
+                      >설레지만 낯설어서 걱정이 된다
+                      <input
+                        type="radio"
+                        id="ans9_2"
+                        name="answer9"
+                        value="i"
+                      />
+                    </label>
+                  </div>
+                </div>
+              </li>
+              <li class="qa10">
+                <div class="q_num">Q.10</div>
+                <div class="q_head">
+                  탑을 오르다 이기기 힘든 강력한 보스를 만난 당신
+                </div>
+                <div class="answer_wrap">
+                  <div class="answer_box">
+                    <label for="ans10_1"
+                      >지금은 힘들겠다. 더 성장해서 도전하자.
+                      <input
+                        type="radio"
+                        id="ans10_1"
+                        name="answer10"
+                        value="s"
+                      />
+                    </label>
+                  </div>
+                  <div class="answer_box">
+                    <label for="ans10_2"
+                      >어떻게 이길 수 있을까? 방법을 찾아보자!
+                      <input
+                        type="radio"
+                        id="ans10_2"
+                        name="answer10"
+                        value="n"
+                      />
+                    </label>
+                  </div>
+                </div>
+              </li>
+              <li class="qa11">
+                <div class="q_num">Q.11</div>
+                <div class="q_head">
+                  생일을 맞은 레버넌트에게 당신이 주고 싶은 선물은?
+                </div>
+                <div class="answer_wrap">
+                  <div class="answer_box">
+                    <label for="ans11_1"
+                      >탑을 오르는데 도움이 되는 실용적인 선물
+                      <input
+                        type="radio"
+                        id="ans11_1"
+                        name="answer11"
+                        value="t"
+                      />
+                    </label>
+                  </div>
+                  <div class="answer_box">
+                    <label for="ans11_2"
+                      >보기만 해도 귀여워 힘이 나는 선물
+                      <input
+                        type="radio"
+                        id="ans11_2"
+                        name="answer11"
+                        value="f"
+                      />
+                    </label>
+                  </div>
+                </div>
+              </li>
+              <li class="qa12">
+                <div class="q_num">Q.12</div>
+                <div class="q_head">강력한 보스와 마주하기 전 나는</div>
+                <div class="answer_wrap">
+                  <div class="answer_box">
+                    <label for="ans12_1"
+                      >내 센스와 능력을 믿고 도전한다
+                      <input
+                        type="radio"
+                        id="ans12_1"
+                        name="answer12"
+                        value="p"
+                      />
+                    </label>
+                  </div>
+                  <div class="answer_box">
+                    <label for="ans12_2"
+                      >공략법을 찾아보고 숙지 후 도전한다
+                      <input
+                        type="radio"
+                        id="ans12_2"
+                        name="answer12"
+                        value="j"
+                      />
+                    </label>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <?$this->load->view("/footer_info");?>
+</div>
+
+<script>
+  $(function () {
+    $(".mainMenu .mn2").mouseover(function () {
+      $(".subMenuWrapper").addClass("on");
+    });
+  });
+</script>

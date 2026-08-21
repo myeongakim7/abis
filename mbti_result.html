@@ -1,0 +1,595 @@
+<script>
+  $(function () {
+    $(".<?=$mbti?>").addClass("on");
+    // MBTI 공유하기 , 끝내기 팝업
+    $(".mbti_ul > li .btn_wrap a.btn_share").click(function () {
+      $(".pop_share").bPopup();
+      setGtag("mbti_comp_share");
+    });
+    $(".mbti_ul > li .btn_wrap a.btn_complete").click(function () {
+      // $('.pop_complete').bPopup();
+      setGtag("mbti_comp_end");
+    });
+
+    $(".mainMenu .mn2").mouseover(function () {
+      $(".subMenuWrapper").addClass("on");
+    });
+  });
+</script>
+<div id="content">
+  <div id="mbti_result" class="section animate">
+    <div class="reset">
+      <div class="mbti_cont">
+        <ul class="mbti_ul">
+          <li class="mbti_type enfp">
+            <div class="cont_wrap">
+              <div class="left">
+                <ul class="tag_ul">
+                  <li>#정열적</li>
+                  <li>#활기</li>
+                  <li>#정많음</li>
+                  <li>#창의적</li>
+                </ul>
+                <div class="mbti_head">
+                  <img src="./images/mbti_result/enfp.png" alt="" />
+                </div>
+                <div class="mbti_txt_box">
+                  <div class="f_blue">“이번에도 신기한 게 잔뜩 있겠지?!”</div>
+                  <div class="f_white">
+                    열정 넘치고 활기찬 모습으로 항상 새로운 발명품을 찾는
+                    팅커!<br />낯을 가리지 않고 사람을 좋아하는 팅커에게
+                    하나뿐인<br />대행자님이 되어주세요!
+                  </div>
+                </div>
+              </div>
+              <div class="right">
+                <img src="./images/mbti_result/ch_enfp.png" alt="" />
+              </div>
+            </div>
+            <div class="btn_wrap">
+              <a href="javascript:;" class="btn_share"
+                ><img src="./images/mbti_result/btn_share.png" alt=""
+              /></a>
+              <a href="/" class="btn_complete"
+                ><img src="./images/mbti_result/btn_test_end.png" alt=""
+              /></a>
+            </div>
+          </li>
+          <li class="mbti_type enfj">
+            <div class="cont_wrap">
+              <div class="left">
+                <ul class="tag_ul">
+                  <li>#온화함</li>
+                  <li>#적극적</li>
+                  <li>#강한 책임감</li>
+                </ul>
+                <div class="mbti_head">
+                  <img src="./images/mbti_result/enfj.png" alt="" />
+                </div>
+                <div class="mbti_txt_box">
+                  <div class="f_blue">"최전방은 내가 맡을게!"</div>
+                  <div class="f_white">
+                    책임감 넘치는 모습으로 언제나 대행자님을 지켜줄 아미!<br />씩씩하고
+                    정의로운 아미와 함께 어비스의 정의를 지켜주세요!
+                  </div>
+                </div>
+              </div>
+              <div class="right">
+                <img src="./images/mbti_result/ch_enfj.png" alt="" />
+              </div>
+            </div>
+            <div class="btn_wrap">
+              <a href="javascript:;" class="btn_share"
+                ><img src="./images/mbti_result/btn_share.png" alt=""
+              /></a>
+              <a href="/" class="btn_complete"
+                ><img src="./images/mbti_result/btn_test_end.png" alt=""
+              /></a>
+            </div>
+          </li>
+          <li class="mbti_type entp">
+            <div class="cont_wrap">
+              <div class="left">
+                <ul class="tag_ul">
+                  <li>#능글능글</li>
+                  <li>#경쾌</li>
+                  <li>#유머러스</li>
+                </ul>
+                <div class="mbti_head">
+                  <img src="./images/mbti_result/entp.png" alt="" />
+                </div>
+                <div class="mbti_txt_box">
+                  <div class="f_blue">
+                    "이 몸이 가지 못하는 곳은 없다니까. 하하핫!"
+                  </div>
+                  <div class="f_white">
+                    특유의 능글거리는 성격으로 대행자님의 곁을 지켜줄 당찬 해적
+                    루터!<br />말보다는 행동으로 보여주는 화끈한 루터와 어비스를
+                    정복하세요!
+                  </div>
+                </div>
+              </div>
+              <div class="right">
+                <img src="./images/mbti_result/ch_entp.png" alt="" />
+              </div>
+            </div>
+            <div class="btn_wrap">
+              <a href="javascript:;" class="btn_share"
+                ><img src="./images/mbti_result/btn_share.png" alt=""
+              /></a>
+              <a href="/" class="btn_complete"
+                ><img src="./images/mbti_result/btn_test_end.png" alt=""
+              /></a>
+            </div>
+          </li>
+          <li class="mbti_type entj">
+            <div class="cont_wrap">
+              <div class="left">
+                <ul class="tag_ul">
+                  <li>#권위</li>
+                  <li>#자신감</li>
+                  <li>#재능만렙</li>
+                </ul>
+                <div class="mbti_head">
+                  <img src="./images/mbti_result/entj.png" alt="" />
+                </div>
+                <div class="mbti_txt_box">
+                  <div class="f_blue">"이 이상 완벽해지면 안 되는데!"</div>
+                  <div class="f_white">
+                    거친 입을 가진 귀여운 서큐버스이자 야망 넘치는 보석 세공사
+                    인챈터!<br />모든 걸 다 아는 척 하지만 아직은 어린
+                    인챈터에게 어비스의 세상을 알려주세요!
+                  </div>
+                </div>
+              </div>
+              <div class="right">
+                <img src="./images/mbti_result/ch_entj.png" alt="" />
+              </div>
+            </div>
+            <div class="btn_wrap">
+              <a href="javascript:;" class="btn_share"
+                ><img src="./images/mbti_result/btn_share.png" alt=""
+              /></a>
+              <a href="/" class="btn_complete"
+                ><img src="./images/mbti_result/btn_test_end.png" alt=""
+              /></a>
+            </div>
+          </li>
+          <li class="mbti_type esfp">
+            <div class="cont_wrap">
+              <div class="left">
+                <ul class="tag_ul">
+                  <li>#사교적</li>
+                  <li>#활동적</li>
+                  <li>#친절함</li>
+                  <li>#낙천적</li>
+                </ul>
+                <div class="mbti_head">
+                  <img src="./images/mbti_result/esfp.png" alt="" />
+                </div>
+                <div class="mbti_txt_box">
+                  <div class="f_blue">
+                    "너만을 위한 콘서트야! 제대로 호응해줘야 해?"
+                  </div>
+                  <div class="f_white">
+                    대행자님에게 적극적으로 다가갈 자유로운 영혼을 가진 슈퍼스타
+                    바드!<br />노래를 좋아하는 바드에게 어비스 최고의 팬이
+                    되어주세요!
+                  </div>
+                </div>
+              </div>
+              <div class="right">
+                <img src="./images/mbti_result/ch_esfp.png" alt="" />
+              </div>
+            </div>
+            <div class="btn_wrap">
+              <a href="javascript:;" class="btn_share"
+                ><img src="./images/mbti_result/btn_share.png" alt=""
+              /></a>
+              <a href="/" class="btn_complete"
+                ><img src="./images/mbti_result/btn_test_end.png" alt=""
+              /></a>
+            </div>
+          </li>
+          <li class="mbti_type esfj">
+            <div class="cont_wrap">
+              <div class="left">
+                <ul class="tag_ul">
+                  <li>#동정심</li>
+                  <li>#나눔</li>
+                  <li>#베품</li>
+                  <li>#타고난 협력자</li>
+                </ul>
+                <div class="mbti_head">
+                  <img src="./images/mbti_result/esfj.png" alt="" />
+                </div>
+                <div class="mbti_txt_box">
+                  <div class="f_blue">"귀족의 의무를 다 해드리죠."</div>
+                  <div class="f_white">
+                    허세가 가득해 보이지만 마음은 누구보다 여린 노블!<br />강한
+                    척 하는 노블이 마음을 열 수 있게 대행자님이 최고의 친구가
+                    되어주세요!
+                  </div>
+                </div>
+              </div>
+              <div class="right">
+                <img src="./images/mbti_result/ch_esfj.png" alt="" />
+              </div>
+            </div>
+            <div class="btn_wrap">
+              <a href="javascript:;" class="btn_share"
+                ><img src="./images/mbti_result/btn_share.png" alt=""
+              /></a>
+              <a href="/" class="btn_complete"
+                ><img src="./images/mbti_result/btn_test_end.png" alt=""
+              /></a>
+            </div>
+          </li>
+          <li class="mbti_type estp">
+            <div class="cont_wrap">
+              <div class="left">
+                <ul class="tag_ul">
+                  <li>#관대함</li>
+                  <li>#개방적</li>
+                  <li>#센스만점</li>
+                  <li>#유머감각</li>
+                </ul>
+                <div class="mbti_head">
+                  <img src="./images/mbti_result/estp.png" alt="" />
+                </div>
+                <div class="mbti_txt_box">
+                  <div class="f_blue">
+                    "돈이라도 줬으면 곱게 보내줬을텐데! 하핫, 농담!"
+                  </div>
+                  <div class="f_white">
+                    SNS와 꾸미기를 좋아하는 귀여운 기타리스트 튜너! <br />천재
+                    타이틀을 지키기 위해 노력하는 튜너지만 남몰래 죽도록<br />연습하는
+                    건 모두에게 비밀이에요!
+                  </div>
+                </div>
+              </div>
+              <div class="right">
+                <img src="./images/mbti_result/ch_estp.png" alt="" />
+              </div>
+            </div>
+            <div class="btn_wrap">
+              <a href="javascript:;" class="btn_share"
+                ><img src="./images/mbti_result/btn_share.png" alt=""
+              /></a>
+              <a href="/" class="btn_complete"
+                ><img src="./images/mbti_result/btn_test_end.png" alt=""
+              /></a>
+            </div>
+          </li>
+          <li class="mbti_type estj">
+            <div class="cont_wrap">
+              <div class="left">
+                <ul class="tag_ul">
+                  <li>#현실적</li>
+                  <li>#사실주의</li>
+                  <li>#지도력 만렙</li>
+                  <li>#추진력</li>
+                </ul>
+                <div class="mbti_head">
+                  <img src="./images/mbti_result/estj.png" alt="" />
+                </div>
+                <div class="mbti_txt_box">
+                  <div class="f_blue">
+                    "위험 요소 제거 완료. 계속 전진하겠다."
+                  </div>
+                  <div class="f_white">
+                    타고난 리더 가드와 함께라면 대행자님이 끌려다닐지도
+                    몰라요!<br />터프해 보이지만 귀여운 것을 좋아하는 가드가
+                    대행자님을 안 좋아<br />할 리가 없잖아요!?
+                  </div>
+                </div>
+              </div>
+              <div class="right">
+                <img src="./images/mbti_result/ch_estj.png" alt="" />
+              </div>
+            </div>
+            <div class="btn_wrap">
+              <a href="javascript:;" class="btn_share"
+                ><img src="./images/mbti_result/btn_share.png" alt=""
+              /></a>
+              <a href="/" class="btn_complete"
+                ><img src="./images/mbti_result/btn_test_end.png" alt=""
+              /></a>
+            </div>
+          </li>
+          <li class="mbti_type infp">
+            <div class="cont_wrap">
+              <div class="left">
+                <ul class="tag_ul">
+                  <li>#차분함</li>
+                  <li>#창의적</li>
+                  <li>#낭만적</li>
+                  <li>#신념중시</li>
+                </ul>
+                <div class="mbti_head">
+                  <img src="./images/mbti_result/infp.png" alt="" />
+                </div>
+                <div class="mbti_txt_box">
+                  <div class="f_blue">
+                    "스쳐가는 꿈 속에서 확신할 수 있던 건, 우리가 특별한
+                    인연이란 거야"
+                  </div>
+                  <div class="f_white">
+                    모험을 낭만으로 가득 채울 친절한 수수께끼 마녀 허미트!<br />허미트와
+                    함께 여행할 때 나이나 피부 얘기는 금물이에요!
+                  </div>
+                </div>
+              </div>
+              <div class="right">
+                <img src="./images/mbti_result/ch_infp.png" alt="" />
+              </div>
+            </div>
+            <div class="btn_wrap">
+              <a href="javascript:;" class="btn_share"
+                ><img src="./images/mbti_result/btn_share.png" alt=""
+              /></a>
+              <a href="/" class="btn_complete"
+                ><img src="./images/mbti_result/btn_test_end.png" alt=""
+              /></a>
+            </div>
+          </li>
+          <li class="mbti_type infj">
+            <div class="cont_wrap">
+              <div class="left">
+                <ul class="tag_ul">
+                  <li>#통찰력</li>
+                  <li>#직관적</li>
+                  <li>#인내심만렙</li>
+                  <li>#화합</li>
+                </ul>
+                <div class="mbti_head">
+                  <img src="./images/mbti_result/infj.png" alt="" />
+                </div>
+                <div class="mbti_txt_box">
+                  <div class="f_blue">
+                    "우리의 여정은, 언제나 위대한 발견이에요!"
+                  </div>
+                  <div class="f_white">
+                    책으로 세상과 모험을 배운 소심하고 순진한 소녀
+                    파이오니아!<br />책에 빠져 세상을 경험하지 못한
+                    파이오니아에게 하나뿐인 친구가 되어주세요!
+                  </div>
+                </div>
+              </div>
+              <div class="right">
+                <img src="./images/mbti_result/ch_infj.png" alt="" />
+              </div>
+            </div>
+            <div class="btn_wrap">
+              <a href="javascript:;" class="btn_share"
+                ><img src="./images/mbti_result/btn_share.png" alt=""
+              /></a>
+              <a href="/" class="btn_complete"
+                ><img src="./images/mbti_result/btn_test_end.png" alt=""
+              /></a>
+            </div>
+          </li>
+          <li class="mbti_type intp">
+            <div class="cont_wrap">
+              <div class="left">
+                <ul class="tag_ul">
+                  <li>#조용함</li>
+                  <li>#과묵함</li>
+                  <li>#논리적</li>
+                  <li>#분석적</li>
+                </ul>
+                <div class="mbti_head">
+                  <img src="./images/mbti_result/intp.png" alt="" />
+                </div>
+                <div class="mbti_txt_box">
+                  <div class="f_blue">
+                    "마법에 능통하다면, 이건 무리도 아니지."
+                  </div>
+                  <div class="f_white">
+                    뛰어난 통찰력을 바탕으로 최연소 황실 마법사단장이 된
+                    위버!<br />마법만 알고 세상은 아직 모르는 위버에게 어비스의
+                    세상을 경험시켜주세요!
+                  </div>
+                </div>
+              </div>
+              <div class="right">
+                <img src="./images/mbti_result/ch_intp.png" alt="" />
+              </div>
+            </div>
+            <div class="btn_wrap">
+              <a href="javascript:;" class="btn_share"
+                ><img src="./images/mbti_result/btn_share.png" alt=""
+              /></a>
+              <a href="/" class="btn_complete"
+                ><img src="./images/mbti_result/btn_test_end.png" alt=""
+              /></a>
+            </div>
+          </li>
+          <li class="mbti_type intj">
+            <div class="cont_wrap">
+              <div class="left">
+                <ul class="tag_ul">
+                  <li>#이성적</li>
+                  <li>#논리적</li>
+                  <li>#개념중시</li>
+                  <li>#입력출력</li>
+                </ul>
+                <div class="mbti_head">
+                  <img src="./images/mbti_result/intj.png" alt="" />
+                </div>
+                <div class="mbti_txt_box">
+                  <div class="f_blue">
+                    "마음이 담긴 선물은.. 소중 한 거군요. 입력해두겠습니다."
+                  </div>
+                  <div class="f_white">
+                    입력된 값으로 세상을 바라보는 비행형 전투 안드로이드
+                    호넷!<br />감정을 모르는 호넷에게 대행자님이 사랑을
+                    알려주시는 건 어때요?
+                  </div>
+                </div>
+              </div>
+              <div class="right">
+                <img src="./images/mbti_result/ch_intj.png" alt="" />
+              </div>
+            </div>
+            <div class="btn_wrap">
+              <a href="javascript:;" class="btn_share"
+                ><img src="./images/mbti_result/btn_share.png" alt=""
+              /></a>
+              <a href="/" class="btn_complete"
+                ><img src="./images/mbti_result/btn_test_end.png" alt=""
+              /></a>
+            </div>
+          </li>
+          <li class="mbti_type isfp">
+            <div class="cont_wrap">
+              <div class="left">
+                <ul class="tag_ul">
+                  <li>#과묵함</li>
+                  <li>#다정함</li>
+                  <li>#온화함</li>
+                  <li>#친절함</li>
+                </ul>
+                <div class="mbti_head">
+                  <img src="./images/mbti_result/isfp.png" alt="" />
+                </div>
+                <div class="mbti_txt_box">
+                  <div class="f_blue">
+                    "우리가 함께 한다면, 정상도 금방일 거에요."
+                  </div>
+                  <div class="f_white">
+                    안드로이드임에도 다양한 감정을 표현하는 상냥한 안드로이드
+                    커리어!<br />아이 같은 긍정적인 마음을 가진 커리어의 동심을
+                    지켜주세요!
+                  </div>
+                </div>
+              </div>
+              <div class="right">
+                <img src="./images/mbti_result/ch_isfp.png" alt="" />
+              </div>
+            </div>
+            <div class="btn_wrap">
+              <a href="javascript:;" class="btn_share"
+                ><img src="./images/mbti_result/btn_share.png" alt=""
+              /></a>
+              <a href="/" class="btn_complete"
+                ><img src="./images/mbti_result/btn_test_end.png" alt=""
+              /></a>
+            </div>
+          </li>
+          <li class="mbti_type isfj">
+            <div class="cont_wrap">
+              <div class="left">
+                <ul class="tag_ul">
+                  <li>#정의불가</li>
+                  <li>#다양함</li>
+                  <li>#조용시끌</li>
+                  <li>#측정불가</li>
+                </ul>
+                <div class="mbti_head">
+                  <img src="./images/mbti_result/isfj.png" alt="" />
+                </div>
+                <div class="mbti_txt_box">
+                  <div class="f_blue">
+                    "아, 미안... 다시 말해줘. 잠깐 졸아서..."
+                  </div>
+                  <div class="f_white">
+                    항상 졸린듯한 표정으로 무슨 생각을 하는지 알 수 없는
+                    로그!<br />아직 세상에 기준이 없는 로그에게 대행자님이
+                    새로운 길잡이가 되어주세요!
+                  </div>
+                </div>
+              </div>
+              <div class="right">
+                <img src="./images/mbti_result/ch_isfj.png" alt="" />
+              </div>
+            </div>
+            <div class="btn_wrap">
+              <a href="javascript:;" class="btn_share"
+                ><img src="./images/mbti_result/btn_share.png" alt=""
+              /></a>
+              <a href="/" class="btn_complete"
+                ><img src="./images/mbti_result/btn_test_end.png" alt=""
+              /></a>
+            </div>
+          </li>
+          <li class="mbti_type istp">
+            <div class="cont_wrap">
+              <div class="left">
+                <ul class="tag_ul">
+                  <li>#과묵함</li>
+                  <li>#호기심만렙</li>
+                  <li>#관찰력</li>
+                  <li>#합리적</li>
+                </ul>
+                <div class="mbti_head">
+                  <img src="./images/mbti_result/istp.png" alt="" />
+                </div>
+                <div class="mbti_txt_box">
+                  <div class="f_blue">
+                    "오는 길에 향기 나는 풀을 발견해서 조금 늦었습니다!"
+                  </div>
+                  <div class="f_white">
+                    겉보기엔 차갑고 과묵해 보이지만 세상에 호기심 넘치는 고양이
+                    소녀 메이드<br />가끔은 냥냥펀치가 날아올 수 있지만 메이드의
+                    새로운 집사가 되어주세요!
+                  </div>
+                </div>
+              </div>
+              <div class="right">
+                <img src="./images/mbti_result/ch_istp.png" alt="" />
+              </div>
+            </div>
+            <div class="btn_wrap">
+              <a href="javascript:;" class="btn_share"
+                ><img src="./images/mbti_result/btn_share.png" alt=""
+              /></a>
+              <a href="/" class="btn_complete"
+                ><img src="./images/mbti_result/btn_test_end.png" alt=""
+              /></a>
+            </div>
+          </li>
+          <li class="mbti_type istj">
+            <div class="cont_wrap">
+              <div class="left">
+                <ul class="tag_ul">
+                  <li>#신중함</li>
+                  <li>#의외성</li>
+                  <li>#집중력</li>
+                  <li>#노력파</li>
+                </ul>
+                <div class="mbti_head">
+                  <img src="./images/mbti_result/istj.png" alt="" />
+                </div>
+                <div class="mbti_txt_box">
+                  <div class="f_blue">
+                    "원석은 파도에 몇 번이나 부딪혀서 태어나지. <br />우리도 그
+                    과정일 뿐이야."
+                  </div>
+                  <div class="f_white">
+                    언뜻 봐도 고수의 냄새가 풍기는 동방의 반전매력 검사 라이터
+                    <br />풍류를 좋아하는 라이터와 어비스에서 유유자적 해보시는
+                    건 어떨까요?
+                  </div>
+                </div>
+              </div>
+              <div class="right">
+                <img src="./images/mbti_result/ch_istj.png" alt="" />
+              </div>
+            </div>
+            <div class="btn_wrap">
+              <a href="javascript:;" class="btn_share"
+                ><img src="./images/mbti_result/btn_share.png" alt=""
+              /></a>
+              <a href="/" class="btn_complete"
+                ><img src="./images/mbti_result/btn_test_end.png" alt=""
+              /></a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <?$this->load->view("/footer_info");?>
+</div>

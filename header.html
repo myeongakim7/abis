@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta property="og:type" content="website">
+    <meta name="robots" content="ALL">
+    <link rel="icon" href="./images/favicon.png">
+
+    <title>어비스메이트</title>
+    <meta name="og:type" property="og:type" content="website" />
+    <meta name="og:title" property="og:title" content="[어비스메이트] 정식 OPEN 완료! 지금 바로 탑 위에 운명을 건 소녀들을 만나보세요" />
+    <meta property="og:site_name" content="어비스메이트">
+    <meta name="og:url" property="og:url" content="<?=$this->config->item("base_url")?>" />
+    <meta name="og:image" property="og:image" content="<?=$this->config->item("base_url")?>./images/share.jpg" />
+    <meta name="google-site-verification" content="BEcgzWRokHrhvoz1GKrMr2q24bLPi7FRfjpBYBPCXDc" />
+    <link rel="stylesheet" type="text/css" href="/public/css/font.css">
+
+    <?if( strpos($_SERVER["REQUEST_URI"], "coupon") === false):?>
+    <link rel="stylesheet" type="text/css" href="/public/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/fullpage.css">
+    <?endif;?>
+    <link rel="stylesheet" type="text/css" href="/public/css/sub_common.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/sub.pc.css">
+    <link rel="preload" href="/public/txt/app-ads.txt" as="document">
+    <?if( strpos($_SERVER["REQUEST_URI"], "mbti") !== false ):?>
+    <link rel="stylesheet" type="text/css" href="/public/css/mbti.pc.css">
+    <?endif;?>
+
+    <script type="text/javascript" src="/public/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="/public/js/jquery-migrate-3.1.0.js"></script>
+    <script type="text/javascript" src="/public/js/jquery.ba-throttle-debounce.min.js"></script>
+    <script type="text/javascript" src="/public/js/jquery.bpop.js"></script>
+    <?if( strpos($_SERVER["REQUEST_URI"], "coupon") === false):?>
+        <script type="text/javascript" src="/public/js/swiper.min.js"></script>
+        <script type="text/javascript" src="/public/js/Carousel.js"></script>
+        <script type="text/javascript" src="/public/js/fullpage.js"></script>
+    <?endif;?>
+    <script type="text/javascript" src="/public/js/sub.pc.js"></script>
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NNQ6RBH9');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L126DW549F"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-L126DW549F');
+    </script>
+    <script type="text/javascript" src="/public/js/process.js"></script>
+</head>
+<body class="" <?=(strpos($_SERVER["REQUEST_URI"], "mbti") === true || strpos($_SERVER["REQUEST_URI"], "coupon") === true)? 'style="overflow:hidden"' : ""?>>
+<div id="bodyWrapper" class="sub1">
+    <div class="navContainer">
+        <div class="gnbWrapper">
+            <a href="/" class="logo"><span class="blind">어비스메이트 메인 바로가기</span></a>
+            <?if( strpos($_SERVER["REQUEST_URI"], "coupon") === false ):?>
+            <nav class="navigation">
+                <div class="mainMenu" data="sub">
+                    <a href="/#anchor1" class="mn0">메인</a>
+                    <a href="/#anchor2" class="mn1">사전예약</a>
+                    <a href="/#anchor3" class="mn2">게임소개</a>
+                    <a href="/#anchor4" class="mn3">이벤트</a>
+                    <a href="/coupon" class="mn4">쿠폰 등록</a>
+                </div>
+            </nav>
+            <?else:?>
+            <nav class="navigation">
+                <div class="mainMenu" data="sub">
+                    <a href="/#anchor1" class="mn0" >메인</a>
+                    <a href="/#anchor2" class="mn1">사전예약</a>
+                    <a href="/#anchor3" class="mn2">게임소개</a>
+                    <a href="/#anchor4" class="mn3">이벤트</a>
+                    <a href="/coupon" class="mn4 on">쿠폰 등록</a>
+                </div>
+            </nav>
+            <?endif;?>
+            <div class="snsList">
+                <a href="https://cafe.naver.com/abyssmate" target="_blank" class="sns1" onclick="setGtag('outbound_café_link');"><span class="blind">네이버 카페</span></a>
+                <a href="https://www.youtube.com/@df_abyssmate" target="_blank" class="sns2" onclick="setGtag('outbound_youtube');"><span class="blind">유튜브</span></a>
+                <a href="https://x.com/AbyssMate" target="_blank" class="sns3" onclick="setGtag('outbound_twitter')"><span class="blind" >X</span></a>
+                <a href="javascript:;" class="sns4"><span class="blind">공유하기</span></a>
+                <ul class="shareList">
+                    <li><a href="javascript:;" class="shareLink"><span class="blind">URL 링크 공유하기</span></a></li>
+                    <li><a href="javascript:copyLink();" class="shareLink" onclick="setGtag('outbound_link')"><span class="blind">URL 복사</span></a></li>
+                    <li><a href="javascript:twitter_share();" class="shareLink" onclick="setGtag('outbound_link_twitter')"><span class="blind">X에 포스트하기</span></a></li>
+                    <li><a href="javascript:shareMessage();" class="shareLink" onclick="setGtag('outbound_link_kakao')"><span class="blind">채널에 포스트하기</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <?if( strpos($_SERVER["REQUEST_URI"], "sub") == true ):?>
+    <div class="subMenuWrapper">
+        <div class="subMenu">
+            <a href="/sub.html#anchor1" target="_self" class="smn1" data-menuanchor="anchor1">세계관</a>
+            <a href="/sub.html#anchor2" target="_self" class="smn2" data-menuanchor="anchor2">캐릭터</a>
+            <a href="/sub.html#anchor3" target="_self" class="smn3" data-menuanchor="anchor3">게임특징</a>
+            <a href="/sub.html#anchor4" target="_self" class="smn4" data-menuanchor="anchor4">미디어</a>
+        </div>
+    </div>
+    <?endif;?>

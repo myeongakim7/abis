@@ -1,0 +1,54 @@
+<div id="content">
+  <div id="mbti_start" class="section animate">
+    <div class="reset">
+      <div class="mbti_cont">
+        <div class="mbti_logo"><img src="./images/mbti/logo.png" alt="" /></div>
+        <div class="title_wrap">
+          <div class="title_wrap_inner">
+            <div class="title">
+              <img src="./images/mbti/mbti_title.png" alt="" />
+            </div>
+            <div class="sub_title">
+              <img src="./images/mbti/sub_title.png" alt="" />
+            </div>
+            <a
+              href="/mbti/regist"
+              class="btn_start"
+              onclick="setGtag('mbti_test_start')"
+              ><img src="./images/mbti/btn_start.png" alt=""
+            /></a>
+          </div>
+        </div>
+        <div class="share_wrap">
+          <div class="txt">
+            <img src="./images/mbti/share_text.png" alt="" />
+          </div>
+          <div class="icon_box">
+            <a
+              href="javascript:shareMessage();"
+              onclick="setGtag('mbti_main_kakao')"
+              ><img src="./images/mbti/icon_talk.png" alt=""
+            /></a>
+            <a
+              href="javascript:twitter_share();"
+              onclick="setGtag('mbti_main_twitter')"
+              ><img src="./images/mbti/icon_x.png" alt=""
+            /></a>
+            <a href="javascript:copyLink()" onclick="setGtag('mbti_main_link')"
+              ><img src="./images/mbti/icon_share.png" alt=""
+            /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <?$this->load->view("/footer_info");?>
+</div>
+<script>
+  $(function () {
+    $(".mainMenu .mn2").mouseenter(function () {
+      $(".subMenuWrapper").addClass("on");
+    });
+  });
+</script>
