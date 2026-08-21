@@ -1,0 +1,121 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,700; 1,700&display=swap');
+
+
+.section .mbti_cont { position: relative; width: 100%; margin: 0 auto; text-align: center; z-index: 6; } 
+
+/* ------ MBTI 테스트 시작페이지------ */
+#mbti_start { opacity:1;position: relative; min-height: 100vh; background: url(../images/mobile/bg_mbti_start.png) 50% 50% no-repeat; background-size: cover; padding: 15.52% 0 4.24%;; } 
+#mbti_start { overflow: visible; } 
+#mbti_start .mbti_cont {min-width: 100%;  min-height:100vh; height: 100%;  display: flex;  flex-direction: column; align-items: center; justify-content: center; }
+#mbti_start .mbti_cont .mbti_logo { position:relative; display: inline-block; width: 38%; text-align: center; } 
+#mbti_start .mbti_cont .mbti_logo img{width: 100%;  } 
+#mbti_start .mbti_cont .title_wrap{position: relative; margin-top: 27%;}
+#mbti_start .mbti_cont .title_wrap .title_wrap_bg{width: 79%; margin: 0 auto;}
+#mbti_start .mbti_cont .title_wrap .title_wrap_bg img{width: 100%;}
+#mbti_start .mbti_cont .btn_start {position: absolute; top:65%; left:50%; transform: translateX(-50%); display: inline-block; width: 29%; } 
+#mbti_start .mbti_cont .btn_start img{width: 100%; object-fit: cover;} 
+#mbti_start .mbti_cont .share_wrap { position: relative; width: 100%; display: flex; flex-direction: column; align-items: center;  justify-content: center; margin-top: 6.7%;} 
+#mbti_start .mbti_cont .share_wrap .txt{width: 30%;}
+#mbti_start .mbti_cont .share_wrap .txt img{width: 100%;}
+#mbti_start .mbti_cont .share_wrap .icon_box {display: flex; width: 100%; gap:2.7%; justify-content: center; margin-top: 2%; } 
+#mbti_start .mbti_cont .share_wrap .icon_box a{display: inline-block; width: 6.4%;} 
+#mbti_start .mbti_cont .share_wrap .icon_box a img{width: 100%;} 
+
+
+/* ------ MBTI 테스트------ */
+#mbti_test { opacity: 1;min-height: calc(100vh - 218px); height: 100%;  background: url(../images/mobile/bg_test.png) 50% 50% no-repeat; background-size: cover; background-position: center top; padding-bottom: 10%;} 
+#mbti_test:before { content: ""; position: absolute; top:0; left:0; right:0; display: inline-block; width: 100%; height: 5px; background-color: #6eb5e2; z-index: 4; } 
+#mbti_test:after { content: ""; position: absolute; bottom:0; left:0; right:0; display: inline-block; width: 100%; height: 5px; background-color: #6eb5e2; z-index: 4; } 
+#mbti_test .mbti_cont {min-height: calc(100vh - 188px); height: 100%; display: flex; justify-content: center; align-items: center; margin-top: 88px; } 
+#mbti_test .mbti_cont form{width: 100%;}
+#mbti_test .mbti_cont .mbti_question_box{ display: flex; flex-direction: column; justify-content: center; align-items: center; padding-top: 5%; }
+#mbti_test .mbti_cont .mbti_logo { position:relative; display: inline-block; width: 43%; text-align: center; } 
+#mbti_test .mbti_cont .mbti_logo img{width: 100%; object-fit: cover; } 
+#mbti_test .mbti_cont .title_wrap { margin-top:3%;} 
+#mbti_test .mbti_cont .title_wrap .title_img{width: 60%; margin: 0 auto;} 
+#mbti_test .mbti_cont .title_wrap .title_img img{width: 100%;} 
+#mbti_test .mbti_cont .qa_ul { } 
+#mbti_test .mbti_cont .qa_ul > li { display: none; } 
+#mbti_test .mbti_cont .qa_ul > li.on { display: block; font-family: 'NanumSquareBold'; font-weight: 700; text-align: center; } 
+#mbti_test .mbti_cont .progress_box { position: relative;width: 100%; max-width: 100%; margin: 42px auto 0; } 
+#mbti_test .mbti_cont .progress_bg { position: relative;;width: 88%;  height: 34px; margin: 0 auto; background-color: #fff; border-radius: 26.68px; box-shadow: 0px 6px 18px 0px rgba(0, 21, 44, 0.25),inset 1px 1.732px 1px 0px rgba(255, 255, 255, 0.66) } 
+#mbti_test .mbti_cont .progress_bg .icon_cat { position: absolute; top:-56%; left: 100%; margin-left: -20.5px;width:60px; height: 58px; background: url(../images/mobile/icon_cat.png); background-size: cover; z-index: 4; } 
+#mbti_test .mbti_cont .progress_bg .icon_cat.complete {margin-left: -42px } 
+#mbti_test .mbti_cont .progress_bg .progress { position: relative;; width: 8.3333%; height: 100%; background: url(../images/mbti/bg.png); border-top-left-radius: 26.68px; border-bottom-left-radius: 26.68px; z-index: 3; } 
+
+#mbti_test .mbti_cont .progress_box .progress_num {font-family: "Roboto Condensed", sans-serif; font-size: 3.3108vw; line-height: 43px; letter-spacing: -0.01px; font-weight: 700; color: #fff; } 
+#mbti_test .mbti_cont .qa_ul > li .q_num { font-size: 6.6216vw; font-weight: 700; margin-top: 3.7%; color: #49f4ff; } 
+#mbti_test .mbti_cont .qa_ul > li .q_head { font-size: 4.1216vw; margin-top: 2.5%; padding: 0 2%; line-height: 1.3; color: #fff; word-break: keep-all; } 
+#mbti_test .mbti_cont .qa_ul > li .answer_wrap { margin-top: 4% } 
+#mbti_test .mbti_cont .qa_ul > li .answer_wrap .answer_box {position: relative; width: 86%; height: 0; padding-top: 10%; margin: 0 auto; background:url(../images/mobile/answer_box.png) no-repeat; background-size: 100% 100%; cursor: pointer; } 
+#mbti_test .mbti_cont .qa_ul > li .answer_wrap .answer_box:last-child { margin-top:3%; } 
+#mbti_test .mbti_cont .qa_ul > li .answer_wrap label {position: absolute; left: 0; top:50%; transform: translateY(-50%); display: inline-block; width: 100%; font-size: 3.7162vw; text-align: center; line-height: 51px; color: #fff; text-shadow: 0.2703vw 0.2703vw 0 #4074b5, 0.2703vw -0.2703vw 0 #4074b5, -0.2703vw 0.2703vw 0 #4074b5, -0.2703vw -0.2703vw 0 #4074b5, 0.2703vw 0px 0 #4074b5, 0px 0.2703vw 0 #4074b5, -0.2703vw 0px 0 #4074b5, 0px -0.2703vw 0 #4074b5; cursor: pointer; } 
+#mbti_test .mbti_cont .qa_ul > li .answer_wrap input { display: none;} 
+
+
+/* ------ MBTI 결과------ */
+#mbti_result { opacity: 1; min-height: calc(100vh - 218px);  background: url(../images/mobile/bg_result.png) 50% 50% no-repeat; background-size: cover; display: flex; align-items: center; padding: 16% 0 12%; } 
+#mbti_result:before { content: ""; position: absolute; top:0; left:0; right:0; display: inline-block; width: 100%; height: 5px; background-color: #6eb5e2; z-index: 4; } 
+#mbti_result:after { content: ""; position: absolute; bottom:0; left:0; right:0; display: inline-block; width: 100%; height: 5px; background-color: #6eb5e2; z-index: 4; } 
+#mbti_result .mbti_cont { position: relative; display: flex; align-items: center;  z-index: 6; } 
+#mbti_result .mbti_cont .mbti_ul {width: 100%; height: 100%; } 
+#mbti_result .mbti_cont .mbti_ul > li { position: relative; display: none;} 
+#mbti_result .mbti_cont .mbti_ul > li.on {display: block;} 
+#mbti_result .mbti_cont .mbti_ul > li .cont_wrap { position:relative;display: flex; flex-direction: column-reverse; justify-content: center; margin: 0 auto; z-index: 3;} 
+#mbti_result .mbti_cont .mbti_ul > li .cont_wrap .left { position: relative; height: 100%; margin-top: 2%; z-index: 7; } 
+#mbti_result .mbti_cont .mbti_ul > li .cont_wrap .left .tag_ul { display: flex; gap: 2%; justify-content: center;} 
+#mbti_result .mbti_cont .mbti_ul > li .cont_wrap .left .tag_ul > li { font-family: 'NanumSquareExtraBold'; font-size: 2.9730vw; color: #ffffff; } 
+#mbti_result .mbti_cont .mbti_ul > li .cont_wrap .left .mbti_head { width: 68%; margin: 0 auto; margin-top: 6%; } 
+#mbti_result .mbti_cont .mbti_ul > li .cont_wrap .left .mbti_head img{width: 100%; object-fit: cover;} 
+#mbti_result .mbti_cont .mbti_ul > li .cont_wrap .left .mbti_txt_box {position: relative; min-height: 49%; font-family: 'NanumSquareBold'; width: 80% ;background-color: rgba(3, 25, 59, 0.3); margin: 3% auto 0; padding: 3% 0 9%;} 
+#mbti_result .mbti_cont .mbti_ul > li .cont_wrap .left .mbti_txt_box .f_blue { font-size:2.7703vw; line-height: 1.5; letter-spacing: -0.05px; color: #49f4ff; white-space: nowrap;} 
+#mbti_result .mbti_cont .mbti_ul > li .cont_wrap .left .mbti_txt_box .f_white { font-size: 2.4324vw; line-height: 1.5; letter-spacing: -0.05px; color: #e0efff; margin-top: 22px; word-break: keep-all; } 
+#mbti_result .mbti_cont .mbti_ul > li .cont_wrap .right{width: 68%; margin: 0 auto;}
+#mbti_result .mbti_cont .mbti_ul > li .cont_wrap .right img{width: 100%; object-fit: cover;} 
+
+
+#mbti_result .mbti_cont .mbti_ul > li .btn_wrap {position: relative;  z-index: 4;} 
+#mbti_result .mbti_cont .mbti_ul > li .btn_wrap > a { display: inline-block; position: relative; width: 32%;} 
+#mbti_result .mbti_cont .mbti_ul > li .btn_wrap > a:last-child{margin-left:5%;}
+#mbti_result .mbti_cont .mbti_ul > li .btn_wrap > a img{font-size: 0; vertical-align: bottom; width: 100%; object-fit: cover; } 
+
+
+
+/* 팝업 공통 */
+.pop{width: 64%; position: fixed; z-index: 100;}
+.pop.hide{display: none;}
+.pop .pop_inner{position: relative; width: 100%;}
+.pop .pop_inner .pop_bg img{width: 100%; object-fit: cover;}
+.pop .pop_inner .btn_close{position: absolute; top:7%; right:3%; z-index: 5;}
+.pop .pop_inner .btn_close img{width: 60%; object-fit: cover;}
+.pop .pop_inner .pop_cont .share_box a{display: inline-block; }
+.pop .pop_inner .pop_cont .share_box a img{width: 80%; object-fit: cover;}
+
+/* 팝업 - 공유하기  */
+.pop_test .pop_inner .pop_cont_wrap{position: absolute; top:0; left:0; right: 0;display: flex; width: 100%; height: 100%;}
+.pop_test .pop_inner .pop_cont{position: relative; width: 100%; text-align: center;}
+.pop_test .pop_inner .pop_cont .share_box{position: absolute; bottom:28.26%; left:50%; transform: translateX(-50%); display:flex; justify-content: center; gap:3%; width: 100%;}
+
+
+
+/* 팝업 - 공유하기  */
+.pop_share .pop_inner .pop_cont_wrap{position: absolute; top:0; left:0; right: 0;display: flex; width: 100%; height: 100%;}
+.pop_share .pop_inner .pop_cont{position: relative; width: 100%; text-align: center;}
+.pop_share .pop_inner .pop_cont .share_box{position: absolute; bottom:19.3%; left:50%; transform: translateX(-50%); display:flex; justify-content: center; width: 42%;}
+.pop_share .pop_inner .pop_cont .share_box a{}
+
+
+
+/* 팝업 - 테스트 끝내기 */
+.pop_complete{}
+.pop_complete img{width: 100%; object-fit: cover;}
+.pop_complete  .pop_inner .btn_close{position: absolute; top:3%; right:2%;}
+.pop_complete .pop_inner .pop_cont_wrap{position: absolute; top:0; left:0 ; display: flex; flex-direction: column; width: 100%; height: 100%;}
+.pop_complete .pop_inner .pop_cont{position: relative;  width: 100%; height: 50%; text-align: center;}
+.pop_complete .pop_inner .pop_cont a{position: absolute; bottom: 19%; left:0; display: block; width: 100%;}
+.pop_complete .pop_inner .pop_cont .pop_cont_img{position: absolute; top:13%; left:0; width: 100%;}
+.pop_complete .pop_inner .pop_cont1 .pop_cont_img img{width: 80%;}
+.pop_complete .pop_inner .pop_cont1 a img{width: 50%;}
+.pop_complete .pop_inner .pop_cont2 .pop_cont_img img{width: 80%;}
+.pop_complete .pop_inner .pop_cont2 a img{width: 72%;}

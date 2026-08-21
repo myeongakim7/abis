@@ -1,0 +1,76 @@
+@font-face {
+  font-display: block; 
+  font-family: 'NanumSquare';
+  src: url(../fonts/NanumSquareR.eot);
+  src: url(../fonts/NanumSquareR.eot?#iefix) format("embedded-opentype"), url(../fonts/NanumSquareR.woff) format("woff"), url(../fonts/NanumSquareR.ttf) format("truetype");
+}
+
+@font-face {
+  font-display: block; 
+  font-family: 'NanumSquareLight';
+  src: url(../fonts/NanumSquareL.eot);
+  src: url(../fonts/NanumSquareL.eot?#iefix) format("embedded-opentype"), url(../fonts/NanumSquareL.woff) format("woff"), url(../fonts/NanumSquareL.ttf) format("truetype");
+}
+
+@font-face {
+  font-display: block; 
+  font-family: 'NanumSquareExtraBold';
+  src: url(../fonts/NanumSquareEB.eot);
+  src: url(../fonts/NanumSquareEB.eot?#iefix) format("embedded-opentype"), url(../fonts/NanumSquareEB.woff) format("woff"), url(../fonts/NanumSquareEB.ttf) format("truetype");
+}
+
+@font-face {
+  font-display: block; 
+  font-family: 'NanumSquareBold';
+  src: url(../fonts/NanumSquareB.eot);
+  src: url(../fonts/NanumSquareB.eot?#iefix) format("embedded-opentype"), url(../fonts/NanumSquareB.woff) format("woff"), url(../fonts/NanumSquareB.ttf) format("truetype");
+}
+
+@font-face {
+  font-display: block; 
+  font-family: 'NanumSquareAcR';
+  src: url(../fonts/NanumSquare_acR.eot);
+  src: url(../fonts/NanumSquare_acR.eot?#iefix) format("embedded-opentype"), url(../fonts/NanumSquare_acR.woff) format("woff"), url(../fonts/NanumSquare_acR.ttf) format("truetype");
+}
+
+@font-face {
+  font-display: block; 
+  font-family: 'NanumSquareAcL';
+  src: url(../fonts/NanumSquare_acL.eot);
+  src: url(../fonts/NanumSquare_acL.eot?#iefix) format("embedded-opentype"), url(../fonts/NanumSquare_acL.woff) format("woff"), url(../fonts/NanumSquare_acL.ttf) format("truetype");
+}
+
+@font-face {
+  font-display: block; 
+  font-family: 'NanumSquareAcEB';
+  src: url(../fonts/NanumSquare_acEB.eot);
+  src: url(../fonts/NanumSquare_acEB.eot?#iefix) format("embedded-opentype"), url(../fonts/NanumSquare_acEB.woff) format("woff"), url(../fonts/NanumSquare_acEB.ttf) format("truetype");
+}
+
+@font-face {
+  font-display: block; 
+  font-family: 'NanumSquareAcB';
+  src: url(../fonts/NanumSquare_acB.eot);
+  src: url(../fonts/NanumSquare_acB.eot?#iefix) format("embedded-opentype"), url(../fonts/NanumSquare_acB.woff) format("woff"), url(../fonts/NanumSquare_acB.ttf) format("truetype");
+}
+
+
+@font-face {
+  font-display: block; 
+  font-family: 'sogang';
+  src: url(../fonts/SOGANGUNIVERSITY.otf) format("opentype"),  url(../fonts/SOGANGUNIVERSITY.ttf) format("truetype");
+}
+
+@font-face {
+  font-display: block; 
+  font-family: 'WarhavenOTFR';
+  src: url(../fonts/NEXON_Warhaven_OTF_Regular.otf);
+  src: url(../fonts/NEXON_Warhaven_Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-display: block; 
+  font-family: 'WarhavenOTFB';
+  src: url(../fonts/NEXON_Warhaven_OTF_Bold.otf);
+  src: url(../fonts/NEXON_Warhaven_Bold.ttf) format("truetype");
+}

@@ -1,0 +1,138 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,700; 1,700&display=swap');
+body { overflow-y: auto; overflow-x: hidden; } 
+#content{position:relative;width:100%;height:100vh;}
+.mainMenu a.mn2 { color: #fff } 
+.mainMenu a.mn2:after { background: none; } 
+.mainMenu a.mn3 { color: #69d5ee; } 
+.mainMenu a.mn3:after { transform: scaleX(100%); height: 4px; color: #69d5ee; background: #69d5ee; } 
+.mainMenu a:hover { color: #69d5ee; } 
+
+.subMenuWrapper {display: none;}
+.subMenuWrapper.on{display: block;}
+
+.section .mbti_cont { position: relative; width: 100%; min-width:1024px;margin: 0 auto; text-align: center; z-index: 6; } 
+
+/* ------ MBTI 테스트 시작페이지------ */
+#mbti_start {position:relative;width:100%;height:100%; opacity:1; background: url(../images/mbti/bg_start.png) 50% 50% no-repeat; background-size: cover; background-position: center; } 
+#mbti_start { overflow: visible; } 
+/* #mbti_start .reset{display: flex;align-items: center;;} */
+#mbti_start .mbti_cont {min-width: 100%;min-height: 100%;height:auto;}
+#mbti_start .mbti_cont .mbti_logo { position:relative; margin-top: 32px;; display: inline-block; text-align: center; } 
+#mbti_start .mbti_cont .mbti_logo img { width: 100%; object-fit: cover; } 
+#mbti_start .mbti_cont .title_wrap { position: relative; display: flex; justify-content: center; margin-top: 23px; text-align: center; } 
+#mbti_start .mbti_cont .title_wrap_inner { position: relative; width: 637px; height: 637px; background: url(../images/mbti/title_wrap_bg.png) no-repeat; } 
+#mbti_start .mbti_cont .title_wrap .title_wrap_inner .title { position: absolute; top:180px; left:50%; transform: translateX(-50%); } 
+#mbti_start .mbti_cont .title_wrap .title_wrap_inner .sub_title { position: absolute; top:345px; left:50%; transform: translateX(-50%); } 
+#mbti_start .mbti_cont .title_wrap .title_wrap_inner .btn_start { position: absolute; bottom:82px; left:50%; transform: translateX(-50%); display: inline-block; margin-top: 30px; } 
+#mbti_start .mbti_cont .share_wrap { position: relative; margin-top: -20px; text-align: center; } 
+#mbti_start .mbti_cont .share_wrap .txt { } 
+#mbti_start .mbti_cont .share_wrap .icon_box { display: flex; gap:20px; justify-content: center; margin-top: 13px; } 
+
+/* ------ MBTI 테스트------ */
+#mbti_test {height: 100vh; opacity: 1; background: url(../images/mbti/bg_test.png) 50% 50% no-repeat; background-size: cover; background-position: center top; } 
+#mbti_test:before { content: ""; position: absolute; top:0; left:0; right:0; display: inline-block; width: 100%; height: 10px; background-color: #6eb5e2; z-index: 4; } 
+#mbti_test:after { content: ""; position: absolute; bottom:0; left:0; right:0; display: inline-block; width: 100%; height: 10px; background-color: #6eb5e2; z-index: 4; } 
+/* #mbti_test .reset{min-height: 100%; } */
+#mbti_test .mbti_cont { display: flex; justify-content: center; align-items: center;  height: 100%; text-align: center;} 
+#mbti_test .mbti_cont .mbti_question_box{}
+#mbti_test .mbti_cont .mbti_logo { display: inline-block; height: 155px;  text-align: center; } 
+#mbti_test .mbti_cont .title_wrap { margin-top: 38px; text-align: center; } 
+#mbti_test .mbti_cont .qa_ul { } 
+#mbti_test .mbti_cont .qa_ul > li { display: none; } 
+#mbti_test .mbti_cont .qa_ul > li.on { display: block; font-family: 'NanumSquareBold'; font-weight: 700; text-align: center; } 
+#mbti_test .mbti_cont .progress_box { position: relative;width: 855px; margin: 42px auto 0; } 
+#mbti_test .mbti_cont .progress_bg { position: relative;;width: 855px;  height: 52px; margin: 0 auto; background-color: #fff; border-radius: 26.68px; box-shadow: 0px 6px 18px 0px rgba(0, 21, 44, 0.25),inset 1px 1.732px 1px 0px rgba(255, 255, 255, 0.66) } 
+#mbti_test .mbti_cont .progress_bg .icon_cat { position: absolute; top:-50%; left: 100%; margin-left: -48.5px;  background: url(../images/mbti/cat.png); width:97px; height: 90px; z-index: 4; } 
+#mbti_test .mbti_cont .progress_bg .icon_cat.complete {margin-left: -80px } 
+#mbti_test .mbti_cont .progress_bg .progress { position: relative;; width: 8.3333%; height: 100%; background: url(../images/mbti/bg.png); border-top-left-radius: 26.68px; border-bottom-left-radius: 26.68px; z-index: 3; } 
+
+#mbti_test .mbti_cont .progress_box .progress_num {position: absolute; right: -120px; top:0; font-family: "Roboto Condensed", sans-serif; font-size: 25px; line-height: 53px; letter-spacing: -0.01px; font-weight: 700; color: #fff; } 
+#mbti_test .mbti_cont .qa_ul > li .q_num { font-size: 55px; font-weight: 700; margin-top: 52px; color: #49f4ff; } 
+#mbti_test .mbti_cont .qa_ul > li .q_head { font-size: 45px;; margin-top: 15px; line-height: 1.3; color: #fff; word-break: keep-all; } 
+#mbti_test .mbti_cont .qa_ul > li .answer_wrap { margin-top: 40px; } 
+#mbti_test .mbti_cont .qa_ul > li .answer_wrap .answer_box { width: 845px; height: 91px; margin: 0 auto; background:url(../images/mbti/answer_box.png) no-repeat; background-size: 100% auto; cursor: pointer; } 
+#mbti_test .mbti_cont .qa_ul > li .answer_wrap .answer_box:last-child { margin-top: 21px; } 
+#mbti_test .mbti_cont .qa_ul > li .answer_wrap label { display: inline-block; width: 100%; font-size: 35px; line-height: 91px; color: #fff; text-shadow: 2px 2px 0 #4074b5, 2px -2px 0 #4074b5, -2px 2px 0 #4074b5, -2px -2px 0 #4074b5, 2px 0px 0 #4074b5, 0px 2px 0 #4074b5, -2px 0px 0 #4074b5, 0px -2px 0 #4074b5; cursor: pointer; } 
+#mbti_test .mbti_cont .qa_ul > li .answer_wrap input { opacity: 0;width:0;height:0; } 
+
+
+/* ------ MBTI 결과------ */
+#mbti_result {position:relative;width:100%;height:100%; opacity: 1; background: url(../images/mbti_result/bg_result.png) 50% 50% no-repeat; background-size: cover; background-position: center top; } 
+#mbti_result:before { content: ""; position: absolute; top:0; left:0; right:0; display: inline-block; width: 100%; height: 10px; background-color: #6eb5e2; z-index: 4; } 
+#mbti_result:after { content: ""; position: absolute; bottom:0; left:0; right:0; display: inline-block; width: 100%; height: 10px; background-color: #6eb5e2; z-index: 4; } 
+#mbti_result .reset{display: flex; align-items: center;}
+#mbti_result .mbti_cont { position: relative;width:100%;height:100%; display: flex;justify-content:flex-start; align-items: center;  z-index: 6; } 
+#mbti_result .mbti_cont .mbti_ul {display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; } 
+#mbti_result .mbti_cont .mbti_ul > li { position: relative; display: none; width: 1015px; height: 720px;} 
+#mbti_result .mbti_cont .mbti_ul > li.on {display: block;} 
+#mbti_result .mbti_cont .mbti_ul > li .cont_wrap { position:relative; width: 100%; height: 100%; text-align: left; } 
+#mbti_result .mbti_cont .mbti_ul > li .cont_wrap .left { position: relative; text-align: left; padding-top: 80px; padding-left: 51px; z-index: 6; } 
+#mbti_result .mbti_cont .mbti_ul > li .cont_wrap .left .tag_ul { display: flex; gap: 19px; } 
+#mbti_result .mbti_cont .mbti_ul > li .cont_wrap .left .tag_ul > li { font-family: 'NanumSquareExtraBold'; font-size: 26px; color: #ffffff; } 
+#mbti_result .mbti_cont .mbti_ul > li .cont_wrap .left .mbti_head { margin-top: 40px; text-align: left; } 
+#mbti_result .mbti_cont .mbti_ul > li .cont_wrap .left .mbti_txt_box { font-family: 'NanumSquareBold'; margin-top: 22px;background-color: rgba(3,25,59, 0.3);width:720px;height:230px;
+    padding:27px;box-sizing: border-box;margin-left:-27px;letter-spacing: -2px;} 
+#mbti_result .mbti_cont .mbti_ul > li .cont_wrap .left .mbti_txt_box .f_blue { font-size: 24px; line-height: 34px; letter-spacing: -0.5px; color: #49f4ff; white-space: nowrap; } 
+#mbti_result .mbti_cont .mbti_ul > li .cont_wrap .left .mbti_txt_box .f_white { font-size: 21px; line-height: 34px; letter-spacing: -0.5px; word-spacing:-0.7px;color: #e0efff; margin-top: 22px; white-space: nowrap; } 
+
+#mbti_result .mbti_cont .mbti_ul > li .cont_wrap .right {position: absolute;;z-index: 7;; } 
+#mbti_result .mbti_cont .mbti_ul > li.enfp .right {right: -172px; bottom: 100px;} 
+#mbti_result .mbti_cont .mbti_ul > li.enfj .right {right: -70px; bottom:4px; } 
+#mbti_result .mbti_cont .mbti_ul > li.entp .right {right: -114px; bottom: -18px;}
+#mbti_result .mbti_cont .mbti_ul > li.entj .right {right: -199px; bottom: 27px;} 
+#mbti_result .mbti_cont .mbti_ul > li.esfp .right {right: -95px; bottom: 5px;} 
+#mbti_result .mbti_cont .mbti_ul > li.esfj .right {right: -120px; bottom: 6px;} 
+#mbti_result .mbti_cont .mbti_ul > li.estp .right {right: -106px; bottom: 37px;} 
+#mbti_result .mbti_cont .mbti_ul > li.estj .right {right: -66px; bottom: 0;} 
+#mbti_result .mbti_cont .mbti_ul > li.infp .right {right: -207px; bottom: 0;} 
+#mbti_result .mbti_cont .mbti_ul > li.infj .right {right: -134px; bottom: 29px;} 
+#mbti_result .mbti_cont .mbti_ul > li.intp .right {right: -193px; bottom: 17px;} 
+#mbti_result .mbti_cont .mbti_ul > li.intj .right {right: -157px; bottom: -7px;} 
+#mbti_result .mbti_cont .mbti_ul > li.isfp .right {right: -201px; bottom: 50px;} 
+#mbti_result .mbti_cont .mbti_ul > li.isfj .right {right: -174px; bottom: 27px;} 
+#mbti_result .mbti_cont .mbti_ul > li.istp .right {right: -182px; bottom: 19px;}  
+#mbti_result .mbti_cont .mbti_ul > li.istj .right {right: -171px; bottom: 58px;} 
+
+#mbti_result .mbti_cont .mbti_ul > li .btn_wrap { position: absolute; bottom: 0; left: 150px; z-index: 7; } 
+#mbti_result .mbti_cont .mbti_ul > li .btn_wrap > a { display: inline-block; position: relative; width: 305px;} 
+#mbti_result .mbti_cont .mbti_ul > li .btn_wrap > a:last-child{margin-left: 97px;}
+#mbti_result .mbti_cont .mbti_ul > li .btn_wrap > a img{font-size: 0; vertical-align: bottom; } 
+/* #mbti_result .mbti_cont .mbti_ul > li .btn_wrap > a:first-child::before { content: ""; position: absolute; left: -150px; top:-70px; width: 212px; height: 161px; background: url(../images/mbti_result/talk_balloon.png) no-repeat; background-size: cover; }  */
+
+
+/* 팝업 공통 */
+.pop{max-width: 668px; position: fixed; z-index: 100;}
+.pop.hide{display: none;}
+.pop .pop_inner{position: relative; width: 100%;}
+.pop .pop_inner .btn_close{position: absolute; top:7%; right:5%; z-index: 5;}
+
+
+/* 팝업 - 공유하기  */
+.pop_test .pop_inner .pop_cont_wrap{position: absolute; top:0; left:0; right: 0;display: flex; width: 100%; height: 100%;}
+.pop_test .pop_inner .pop_cont{position: relative; width: 100%; text-align: center;}
+.pop_test .pop_inner .pop_cont .share_box{position: absolute; bottom:28.26%; left:50%; transform: translateX(-50%); display:flex; justify-content: center; gap:3%; width: 100%;}
+.pop_test .pop_inner .pop_cont .share_box a{display: inline-block; }
+
+
+/* 팝업 - 공유하기  */
+.pop_share .pop_inner .pop_cont_wrap{position: absolute; top:0; left:0; right: 0;display: flex; width: 100%; height: 100%;}
+.pop_share .pop_inner .pop_cont{position: relative; width: 100%; text-align: center;}
+.pop_share .pop_inner .pop_cont .share_box{position: absolute; bottom:21.3%; left:50%; transform: translateX(-50%); display:flex; justify-content: center; gap:3%; width: 100%;}
+.pop_share .pop_inner .pop_cont .share_box a{display: inline-block; }
+
+
+
+/* 팝업 - 테스트 끝내기 */
+.pop_complete{max-width: 1328px;}
+.pop_complete img{width: 100%;}
+.pop_complete  .pop_inner .btn_close{position: absolute; top:7%; right:3%;}
+.pop_complete .pop_inner .pop_cont_wrap{position: absolute; top:0; left:0 ;display: flex; width: 100%; height: 100%;}
+.pop_complete .pop_inner .pop_cont{position: relative; width: 50%; ;text-align: center;}
+.pop_complete .pop_inner .pop_cont a{position: absolute; bottom:11%; left:0; display: block; width: 100%;}
+.pop_complete .pop_inner .pop_cont .pop_cont_img{position: absolute; top:12%; left:0; width: 100%;}
+.pop_complete .pop_inner .pop_cont1 .pop_cont_img img{width: 70%;}
+.pop_complete .pop_inner .pop_cont1 .pop_cont_img img{width: 70%;}
+.pop_complete .pop_inner .pop_cont1 a img{width: 56.55%;}
+.pop_complete .pop_inner .pop_cont2 .pop_cont_img img{width: 77%;}
+.pop_complete .pop_inner .pop_cont2 a img{width: 74.55%;}
